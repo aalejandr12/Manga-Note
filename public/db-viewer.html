@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de Base de Datos - Manga Library</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: white;
+            color: #667eea;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .tab-btn:hover {
+            background: #f8f9fa;
+        }
+
+        .tab-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .stats {
+            padding: 20px 30px;
+            background: #fff;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .stat-item {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea15, #764ba215);
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+
+        .table-container {
+            padding: 30px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px 10px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        th:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        th.sortable::after {
+            content: ' ⇅';
+            opacity: 0.5;
+        }
+
+        th.sorted-asc::after {
+            content: ' ↑';
+            opacity: 1;
+        }
+
+        th.sorted-desc::after {
+            content: ' ↓';
+            opacity: 1;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #e9ecef;
+            transition: all 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+            transform: scale(1.01);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        td {
+            padding: 12px 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge-success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .badge-info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .badge-danger {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .file-path {
+            font-family: monospace;
+            font-size: 12px;
+            color: #6c757d;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: #6c757d;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 60px;
+            color: #6c757d;
+        }
+
+        .refresh-btn {
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .refresh-btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            margin: 20px 30px;
+            border-radius: 8px;
+            border-left: 4px solid #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗄️ Visor de Base de Datos</h1>
+            <p>Manga Library System</p>
+        </div>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar en todas las columnas...">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-table="series">📚 Series</button>
+                <button class="tab-btn" data-table="volumes">📖 Volúmenes</button>
+            </div>
+            <button class="refresh-btn" onclick="loadData()">🔄 Actualizar</button>
+        </div>
+
+        <div class="stats" id="stats">
+            <!-- Stats se cargan dinámicamente -->
+        </div>
+
+        <div class="table-container" id="tableContainer">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Cargando datos...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentTable = 'series';
+        let allData = { series: [], volumes: [] };
+        let sortColumn = null;
+        let sortDirection = 'asc';
+
+        // Cargar datos al inicio
+        document.addEventListener('DOMContentLoaded', () => {
+            loadData();
+            
+            // Event listeners
+            document.getElementById('searchInput').addEventListener('input', filterData);
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', () => switchTable(btn.dataset.table));
+            });
+        });
+
+        async function loadData() {
+            try {
+                const [seriesRes, volumesRes] = await Promise.all([
+                    fetch('/api/series'),
+                    fetch('/api/volumes')
+                ]);
+
+                allData.series = await seriesRes.json();
+                allData.volumes = await volumesRes.json();
+
+                renderStats();
+                renderTable();
+            } catch (error) {
+                document.getElementById('tableContainer').innerHTML = 
+                    `<div class="error">❌ Error al cargar datos: ${error.message}</div>`;
+            }
+        }
+
+        function renderStats() {
+            const stats = document.getElementById('stats');
+            const totalSeries = allData.series.length;
+            const totalVolumes = allData.volumes.length;
+            const withCovers = allData.series.filter(s => s.cover_image && !s.cover_image.startsWith('pdf:')).length;
+            const totalSize = allData.volumes.reduce((sum, v) => sum + (v.file_size || 0), 0);
+
+            stats.innerHTML = `
+                <div class="stat-item">
+                    <div class="stat-number">${totalSeries}</div>
+                    <div class="stat-label">Series Totales</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">${totalVolumes}</div>
+                    <div class="stat-label">Volúmenes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">${withCovers}</div>
+                    <div class="stat-label">Con Portadas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">${(totalSize / 1024 / 1024 / 1024).toFixed(2)} GB</div>
+                    <div class="stat-label">Tamaño Total</div>
+                </div>
+            `;
+        }
+
+        function switchTable(table) {
+            currentTable = table;
+            sortColumn = null;
+            sortDirection = 'asc';
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.table === table);
+            });
+            
+            renderTable();
+        }
+
+        function renderTable() {
+            const data = allData[currentTable];
+            const container = document.getElementById('tableContainer');
+            
+            if (data.length === 0) {
+                container.innerHTML = '<div class="no-data">📭 No hay datos disponibles</div>';
+                return;
+            }
+
+            const columns = currentTable === 'series' ? 
+                ['id', 'title', 'series_code', 'author', 'genre', 'total_volumes', 'cover_source', 'reading_status'] :
+                ['id', 'title', 'series_id', 'chapter_start', 'chapter_end', 'file_path', 'total_pages', 'file_size'];
+
+            const headers = columns.map(col => {
+                const label = col.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                return `<th class="sortable ${sortColumn === col ? 'sorted-' + sortDirection : ''}" onclick="sortTable('${col}')">${label}</th>`;
+            }).join('');
+
+            const rows = data.map(row => {
+                const cells = columns.map(col => {
+                    let value = row[col];
+                    
+                    if (col === 'file_path') {
+                        const filename = value ? value.split('/').pop() : 'N/A';
+                        return `<td><span class="file-path" title="${value}">${filename}</span></td>`;
+                    }
+                    
+                    if (col === 'file_size') {
+                        const mb = (value / 1024 / 1024).toFixed(2);
+                        return `<td>${mb} MB</td>`;
+                    }
+                    
+                    if (col === 'cover_source') {
+                        const badges = {
+                            'pdf_extracted': 'success',
+                            'pdf_page': 'warning',
+                            'google': 'info',
+                            'placeholder': 'danger'
+                        };
+                        const type = badges[value] || 'info';
+                        return `<td><span class="badge badge-${type}">${value || 'N/A'}</span></td>`;
+                    }
+                    
+                    if (col === 'reading_status') {
+                        const badges = {
+                            'completed': 'success',
+                            'reading': 'info',
+                            'pending': 'warning'
+                        };
+                        const type = badges[value] || 'warning';
+                        return `<td><span class="badge badge-${type}">${value || 'pending'}</span></td>`;
+                    }
+                    
+                    return `<td>${value !== null && value !== undefined ? value : 'N/A'}</td>`;
+                }).join('');
+                
+                return `<tr>${cells}</tr>`;
+            }).join('');
+
+            container.innerHTML = `
+                <table>
+                    <thead>
+                        <tr>${headers}</tr>
+                    </thead>
+                    <tbody>${rows}</tbody>
+                </table>
+            `;
+        }
+
+        function sortTable(column) {
+            if (sortColumn === column) {
+                sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                sortColumn = column;
+                sortDirection = 'asc';
+            }
+
+            allData[currentTable].sort((a, b) => {
+                let aVal = a[column];
+                let bVal = b[column];
+                
+                // Handle nulls
+                if (aVal === null || aVal === undefined) return 1;
+                if (bVal === null || bVal === undefined) return -1;
+                
+                // Compare
+                if (typeof aVal === 'string') {
+                    aVal = aVal.toLowerCase();
+                    bVal = bVal.toLowerCase();
+                }
+                
+                if (sortDirection === 'asc') {
+                    return aVal > bVal ? 1 : -1;
+                } else {
+                    return aVal < bVal ? 1 : -1;
+                }
+            });
+
+            renderTable();
+        }
+
+        function filterData() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            
+            if (!search) {
+                renderTable();
+                return;
+            }
+
+            const originalData = currentTable === 'series' ? 
+                [...allData.series] : 
+                [...allData.volumes];
+
+            const filtered = originalData.filter(row => {
+                return Object.values(row).some(val => {
+                    if (val === null || val === undefined) return false;
+                    return String(val).toLowerCase().includes(search);
+                });
+            });
+
+            // Temporalmente reemplazar datos para el render
+            const backup = allData[currentTable];
+            allData[currentTable] = filtered;
+            renderTable();
+            allData[currentTable] = backup;
+        }
+    </script>
+</body>
+</html>

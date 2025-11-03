@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lector - Mi Biblioteca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4A90E2",
+                        "background-light": "#F5F5F5",
+                        "background-dark": "#1E1E1E",
+                        "ui-light": "#333333",
+                        "ui-dark": "#CCCCCC",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/css">
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+        #pdf-canvas {
+            max-width: 100%;
+            height: auto;
+            touch-action: pan-x pan-y pinch-zoom;
+        }
+        .ui-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .ui-visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        header, footer {
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Slider personalizado estilo Lezhin - OCULTAR thumb nativo */
+        #page-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        #page-slider::-moz-range-thumb {
+            width: 0;
+            height: 0;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Ocultar track nativo */
+        #page-slider::-webkit-slider-runnable-track {
+            background: transparent;
+        }
+        #page-slider::-moz-range-track {
+            background: transparent;
+        }
+        
+        /* Deshabilitar smooth scroll en CSS - se controla por JS */
+        #pdf-container {
+            scroll-behavior: auto;
+        }
+        
+        /* Placeholders estilo Lezhin */
+        .page-placeholder {
+            transition: background-color 0.2s;
+        }
+    </style>
+</head>
+<body class="font-display overflow-hidden">
+<div class="relative flex h-dvh min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root">
+    
+    <!-- Main Content Area (PDF Canvas) -->
+    <div class="flex-grow flex items-center justify-center h-full w-full absolute inset-0 overflow-hidden">
+        <div id="pdf-container" class="w-full h-full max-w-4xl mx-auto flex items-center justify-center p-2 overflow-auto">
+            <div id="pdf-pages" class="w-full flex flex-col items-center gap-2"></div>
+            <canvas id="pdf-canvas"></canvas>
+        </div>
+        <div id="loading-indicator" class="absolute inset-0 flex items-center justify-center bg-background-light dark:bg-background-dark z-50" style="display: flex;">
+            <div class="flex flex-col items-center gap-4 max-w-md px-6">
+                <svg class="animate-spin h-12 w-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <div class="text-center">
+                    <p id="loading-text" class="text-ui-light dark:text-ui-dark text-lg font-medium mb-2">Cargando manga...</p>
+                    <p id="loading-progress" class="text-ui-light/70 dark:text-ui-dark/70 text-sm">Preparando...</p>
+                </div>
+                <!-- Barra de progreso -->
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                    <div id="loading-bar" class="bg-primary h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Touch/Click Areas for Navigation -->
+    <div id="prev-page-area" class="absolute left-0 top-0 h-full w-1/4 cursor-pointer z-10"></div>
+    <div id="next-page-area" class="absolute right-0 top-0 h-full w-1/4 cursor-pointer z-10"></div>
+    <div id="toggle-ui-area" class="absolute left-1/4 top-0 h-full w-1/2 cursor-pointer z-10"></div>
+
+    <!-- Overlaid UI -->
+    <div id="ui-overlay" class="absolute inset-0 flex flex-col justify-between pointer-events-none ui-visible">
+        
+        <!-- Top Navigation Bar -->
+        <header class="flex items-center justify-between whitespace-nowrap bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm p-3 gap-4 pointer-events-auto">
+            <div class="flex items-center gap-2">
+                <button id="back-btn" class="flex min-w-[40px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 text-ui-light dark:text-ui-dark hover:bg-black/10 dark:hover:bg-white/10">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <h2 id="book-title" class="text-ui-light dark:text-ui-dark text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] truncate max-w-[200px] sm:max-w-none">Cargando...</h2>
+            </div>
+            <div class="relative flex">
+                <button id="menu-btn" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 text-ui-light dark:text-ui-dark hover:bg-black/10 dark:hover:bg-white/10">
+                    <span class="material-symbols-outlined">more_vert</span>
+                </button>
+                <!-- Dropdown Menu -->
+                <div id="menu-dropdown" class="absolute right-0 top-12 z-20 hidden min-w-[220px] overflow-hidden rounded-lg border border-black/10 dark:border-white/10 bg-background-light dark:bg-background-dark shadow-xl">
+                    <div class="py-1">
+                        <button id="mode-paged" class="w-full flex items-center gap-3 px-4 py-2 text-left text-sm text-ui-light dark:text-ui-dark hover:bg-black/10 dark:hover:bg-white/10">
+                            <span class="material-symbols-outlined">view_agenda</span>
+                            Lectura por páginas
+                            <span id="check-paged" class="ml-auto material-symbols-outlined text-primary hidden">check</span>
+                        </button>
+                        <button id="mode-scroll" class="w-full flex items-center gap-3 px-4 py-2 text-left text-sm text-ui-light dark:text-ui-dark hover:bg-black/10 dark:hover:bg-white/10">
+                            <span class="material-symbols-outlined">view_stream</span>
+                            Desplazamiento vertical (continuo)
+                            <span id="check-scroll" class="ml-auto material-symbols-outlined text-primary hidden">check</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Bottom Control Bar -->
+                <!-- Bottom Control Bar (Lezhin Style) -->
+        <footer class="bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm pointer-events-auto border-t border-gray-200 dark:border-gray-700">
+            <div class="w-full max-w-2xl mx-auto px-4 py-3">
+                <!-- Page Info (Top - Estilo Lezhin) -->
+                <div class="flex items-center justify-center mb-2">
+                    <p class="text-center">
+                        <b id="page-num" class="text-xl font-bold text-primary">1</b>
+                        <span class="text-sm text-ui-light/50 dark:text-ui-dark/50 mx-1">/</span>
+                        <span id="page-count" class="text-sm text-ui-light/70 dark:text-ui-dark/70">0</span>
+                    </p>
+                </div>
+
+                <!-- Slider Container (Estilo Lezhin) -->
+                <div class="relative mb-3">
+                    <!-- Rail (Fondo) -->
+                    <div class="absolute inset-0 h-1 bg-gray-300 dark:bg-gray-700 rounded-full top-1/2 -translate-y-1/2"></div>
+                    <!-- Track (Progreso) -->
+                    <div id="slider-track" class="absolute h-1 bg-primary rounded-full top-1/2 -translate-y-1/2 transition-all duration-150" style="width: 0%; left: 0;"></div>
+                    <!-- Slider Input -->
+                    <input id="page-slider" type="range" min="1" max="100" value="1" 
+                           class="relative w-full h-1 appearance-none cursor-pointer bg-transparent z-10"
+                           style="margin: 0;">
+                    <!-- Custom Thumb -->
+                    <div id="slider-thumb" class="absolute w-4 h-4 bg-primary rounded-full top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none transition-all duration-150 shadow-lg" style="left: 0%;"></div>
+                </div>
+
+                <!-- Navigation Buttons (Bottom) -->
+                <ul class="flex items-center justify-center gap-2">
+                    <li>
+                        <button id="prev-btn" class="px-6 py-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-ui-light dark:text-ui-dark transition-all disabled:opacity-50 disabled:cursor-not-allowed font-medium text-sm">
+                            Anterior
+                        </button>
+                    </li>
+                    <li>
+                        <button id="next-btn" class="px-6 py-2 rounded-lg bg-primary hover:bg-primary/90 text-white transition-all font-medium text-sm">
+                            Siguiente
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
+<script src="/js/reader.js"></script>
+</body>
+</html>

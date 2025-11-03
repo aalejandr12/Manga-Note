@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Environment variables (IMPORTANTE: no subir API keys)
+.env
+
+# Database files
+database/*.db
+database/*.db-*
+
+# Uploads
+uploads/*.pdf
+uploads/covers/*.jpg
+uploads/covers/*.png
+
+# Logs
+*.log
+server.log
+
+# PID files
+*.pid
+
+# Backups
+*.backup-*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

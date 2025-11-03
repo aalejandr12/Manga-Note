@@ -1,0 +1,21 @@
+[Unit]
+Description=Manga Library App (user service)
+After=network.target
+
+[Service]
+Type=simple
+# Ejecuta como el usuario actual cuando se copie a ~/.config/systemd/user/
+WorkingDirectory=%h/MangaRead
+Environment=NODE_ENV=production
+Environment=NODE_OPTIONS=--max-old-space-size=512
+ExecStart=/usr/bin/env node %h/MangaRead/server.js
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+
+# USO:
+# 1) Copiar a ~/.config/systemd/user/manga-library.service
+# 2) systemctl --user daemon-reload
+# 3) systemctl --user enable --now manga-library.service

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Subir Manga - Mi Biblioteca</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+      }
+      .upload-area.dragover {
+        border-color: #7f19e6;
+        background-color: rgba(127, 25, 230, 0.1);
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7f19e6",
+              "background-light": "#F9F9F9",
+              "background-dark": "#131316",
+              "text-light-primary": "#333333",
+              "text-dark-primary": "#EAEAEA",
+              "text-light-secondary": "#777777",
+              "text-dark-secondary": "#A0A0A0",
+              "border-light": "#E0E0E0",
+              "border-dark": "#3A3A3A",
+              "accent-light": "#E6E0F8",
+              "accent-dark": "#2A2633",
+              "error": "#D0021B",
+              "success": "#28A745"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="flex h-full grow flex-col">
+<div class="flex flex-1 justify-center p-4 sm:p-6">
+<div class="flex w-full max-w-lg flex-col">
+    
+    <!-- TopNavBar -->
+    <header class="flex items-center justify-between pb-6">
+        <div class="flex items-center gap-3">
+            <button onclick="window.location.href='/'" class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-accent-light dark:hover:bg-accent-dark text-text-light-primary dark:text-text-dark-primary transition-colors">
+                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            </button>
+            <div class="flex items-center gap-3 text-text-light-primary dark:text-text-dark-primary">
+                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-accent-light dark:bg-accent-dark text-primary">
+                    <span class="material-symbols-outlined text-xl">auto_stories</span>
+                </div>
+                <h2 class="text-lg font-bold">Mi Biblioteca</h2>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex flex-col gap-6">
+        <!-- Page Heading -->
+        <div class="flex flex-col gap-1">
+            <h1 class="text-3xl font-black tracking-tighter text-text-light-primary dark:text-text-dark-primary">Subir Nuevo Manga</h1>
+            <p class="text-base text-text-light-secondary dark:text-text-dark-secondary">Selecciona un archivo PDF para agregar a tu biblioteca</p>
+        </div>
+
+        <!-- File Input Area -->
+        <div id="uploadArea" class="upload-area flex flex-col items-center gap-4 rounded-xl border-2 border-dashed border-border-light dark:border-border-dark bg-accent-light/50 dark:bg-accent-dark/50 p-6 text-center cursor-pointer transition-all">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+                <span class="material-symbols-outlined text-3xl">cloud_upload</span>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="text-lg font-bold text-text-light-primary dark:text-text-dark-primary">Arrastra y suelta tu PDF aquí</p>
+                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">o haz clic para buscar archivos</p>
+            </div>
+            <input type="file" id="fileInput" accept=".pdf" multiple class="hidden" />
+            <button id="browseBtn" class="mt-2 flex h-10 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-white px-4 text-sm font-bold text-text-light-primary shadow-sm ring-1 ring-inset ring-border-light dark:bg-accent-dark dark:text-text-dark-primary dark:ring-border-dark transition-colors hover:bg-gray-50 dark:hover:bg-[#342944]">
+                Buscar Archivos
+            </button>
+            <p class="mt-2 text-xs text-text-light-secondary dark:text-text-dark-secondary">Sin límite de tamaño (depende del almacenamiento). Solo archivos .pdf</p>
+        </div>
+
+        <!-- Upload Progress Section -->
+        <div id="progressSection" class="hidden flex-col gap-4">
+            <div id="uploadsList" class="space-y-3">
+                <!-- Upload items will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Status Messages -->
+        <div id="statusMessages" class="space-y-2">
+            <!-- Success/Error messages will appear here -->
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex gap-3 mt-4">
+            <button id="uploadBtn" disabled class="flex-1 h-12 flex items-center justify-center gap-2 rounded-xl bg-primary text-white font-bold shadow-lg shadow-primary/30 disabled:bg-border-light dark:disabled:bg-border-dark disabled:text-text-light-secondary dark:disabled:text-text-dark-secondary disabled:shadow-none disabled:cursor-not-allowed transition-all">
+                <span class="material-symbols-outlined">upload</span>
+                Subir a Biblioteca
+            </button>
+        </div>
+
+        <!-- AI Info Card -->
+        <div class="flex items-start gap-3 p-4 rounded-lg bg-primary/10 border border-primary/20">
+            <span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+            <div class="flex-1">
+                <h3 class="font-bold text-text-light-primary dark:text-text-dark-primary mb-1">Organización automática con IA</h3>
+                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Gemini AI analizará el nombre del archivo para identificar el título, volumen y género automáticamente. Los mangas de la misma serie se agruparán juntos.</p>
+            </div>
+        </div>
+
+        <!-- Recent Uploads -->
+        <div id="recentSection" class="hidden flex-col gap-3">
+            <h3 class="text-lg font-bold text-text-light-primary dark:text-text-dark-primary">Subidos recientemente</h3>
+            <div id="recentList" class="space-y-2">
+                <!-- Recent uploads will appear here -->
+            </div>
+        </div>
+
+    </main>
+
+</div>
+</div>
+</div>
+</div>
+
+<script src="/js/upload.js"></script>
+</body>
+</html>
