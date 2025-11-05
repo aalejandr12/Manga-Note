@@ -1,0 +1,368 @@
+nohup: ignoring input
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.38:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+100.110.74.37 - - [03/Nov/2025 08:55:43] "GET / HTTP/1.1" 200 -
+100.110.74.37 - - [03/Nov/2025 08:55:45] "GET / HTTP/1.1" 200 -
+100.110.74.37 - - [03/Nov/2025 09:10:41] "GET / HTTP/1.1" 200 -
+100.110.74.37 - - [03/Nov/2025 09:10:41] "[31m[1mPOST /upload HTTP/1.1[0m" 400 -
+100.110.74.37 - - [03/Nov/2025 09:14:29] "POST /upload HTTP/1.1" 200 -
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+
+================================================================================
+🚀 NUEVA SOLICITUD DE SUBIDA DE ARCHIVOS
+================================================================================
+
+================================================================================
+🚀 NUEVA SOLICITUD DE SUBIDA DE ARCHIVOS
+================================================================================
+📦 Total de archivos recibidos: 7
+
+📥 Guardando archivos...
+  [1/7] Guardando: Off_Track_Crush.pdf
+  ✅ Guardado correctamente
+  [2/7] Guardando: off_track_crush_1-6_extra.pdf
+  ✅ Guardado correctamente
+  [3/7] Guardando: Firma_de_Amor_1-20.pdf
+  ✅ Guardado correctamente
+  [4/7] Guardando: diferencia_de_tamano_.pdf
+  ✅ Guardado correctamente
+  [5/7] Guardando: Como_usar_al_comandante_de_los_Caballeros_1-2.pdf
+  ✅ Guardado correctamente
+  [6/7] Guardando: Dame_un_bebe_lince_si_no_quieres_verme_enloquecer_7-12.pdf
+  ✅ Guardado correctamente
+  [7/7] Guardando: Weremeerkat_by_Yuguni.pdf
+  ✅ Guardado correctamente
+
+🤖 Procesando 7 archivo(s) con Gemini...
+--------------------------------------------------------------------------------
+
+================================================================================
+📚 PROCESANDO 7 ARCHIVO(S)
+================================================================================
+
+[1/7] ⚙️  Procesando archivo 1 de 7...
+
+📄 Procesando: Off_Track_Crush.pdf
+  🔍 Analizando con Gemini...
+[Intento 1/3] Usando API key #1
+Respuesta de Gemini: {
+  "nombre_carpeta_estandarizado": "Off Track Crush",
+  "titulo_limpio_archivo": "Off Track Crush",
+  "capitulo_o_rango": "ONE_SHOT",
+  "es_secuela_o_extra": false
+}...
+  📊 Metadatos extraídos:
+     - Serie: Off Track Crush
+     - Capítulo: ONE_SHOT
+  📁 Carpeta: /opt/MangaRead/Mangas/Off Track Crush
+  📝 Nuevo nombre: Off Track Crush - Cap. ONE_SHOT.pdf
+  🚚 Moviendo archivo...
+  ✅ Archivo organizado correctamente!
+[1/7] ✅ Completado exitosamente
+
+[2/7] ⚙️  Procesando archivo 2 de 7...
+
+📄 Procesando: off_track_crush_1-6_extra.pdf
+  🔍 Analizando con Gemini...
+[Intento 1/3] Usando API key #2
+Respuesta de Gemini: {
+  "nombre_carpeta_estandarizado": "Off Track Crush",
+  "titulo_limpio_archivo": "Off Track Crush Extra",
+  "capitulo_o_rango": "1-6",
+  "es_secuela_o_extra": true
+}...
+  📊 Metadatos extraídos:
+     - Serie: Off Track Crush
+     - Capítulo: 1-6
+  📁 Carpeta: /opt/MangaRead/Mangas/Off Track Crush
+  📝 Nuevo nombre: Off Track Crush Extra - Cap. 1-6.pdf
+  🚚 Moviendo archivo...
+  ✅ Archivo organizado correctamente!
+[2/7] ✅ Completado exitosamente
+
+[3/7] ⚙️  Procesando archivo 3 de 7...
+
+📄 Procesando: Firma_de_Amor_1-20.pdf
+  🔍 Analizando con Gemini...
+[Intento 1/3] Usando API key #3
+Respuesta de Gemini: {
+  "nombre_carpeta_estandarizado": "Firma de Amor",
+  "titulo_limpio_archivo": "Firma de Amor",
+  "capitulo_o_rango": "1-20",
+  "es_secuela_o_extra": false
+}...
+  📊 Metadatos extraídos:
+     - Serie: Firma de Amor
+     - Capítulo: 1-20
+  📁 Carpeta: /opt/MangaRead/Mangas/Firma de Amor
+  📝 Nuevo nombre: Firma de Amor - Cap. 1-20.pdf
+  🚚 Moviendo archivo...
+  ✅ Archivo organizado correctamente!
+[3/7] ✅ Completado exitosamente
+
+[4/7] ⚙️  Procesando archivo 4 de 7...
+
+📄 Procesando: diferencia_de_tamano_.pdf
+  🔍 Analizando con Gemini...
+[Intento 1/3] Usando API key #4
+Respuesta de Gemini: {
+  "nombre_carpeta_estandarizado": "Diferencia de Tamano",
+  "titulo_limpio_archivo": "Diferencia de Tamano",
+  "capitulo_o_rango": "ONE_SHOT",
+  "es_secuela_o_extra": false
+}...
+  📊 Metadatos extraídos:
+     - Serie: Diferencia de Tamano
+     - Capítulo: ONE_SHOT
+  📁 Carpeta: /opt/MangaRead/Mangas/Diferencia de Tamano
+  📝 Nuevo nombre: Diferencia de Tamano - Cap. ONE_SHOT.pdf
+  🚚 Moviendo archivo...
+  ✅ Archivo organizado correctamente!
+[4/7] ✅ Completado exitosamente
+
+[5/7] ⚙️  Procesando archivo 5 de 7...
+
+📄 Procesando: Como_usar_al_comandante_de_los_Caballeros_1-2.pdf
+  🔍 Analizando con Gemini...
+[Intento 1/3] Usando API key #5
+Respuesta de Gemini: {
+  "nombre_carpeta_estandarizado": "Como usar al comandante de los Caballeros",
+  "titulo_limpio_archivo": "Como usar al comandante de los Caballeros",
+  "capitulo_o_rango": "1-2",
+  "es_secuela_o_ex...
+  📊 Metadatos extraídos:
+     - Serie: Como usar al comandante de los Caballeros
+     - Capítulo: 1-2
+  📁 Carpeta: /opt/MangaRead/Mangas/Como usar al comandante de los Caballeros
+  📝 Nuevo nombre: Como usar al comandante de los Caballeros - Cap. 1-2.pdf
+  🚚 Moviendo archivo...
+  ✅ Archivo organizado correctamente!
+[5/7] ✅ Completado exitosamente
+
+[6/7] ⚙️  Procesando archivo 6 de 7...
+
+📄 Procesando: Dame_un_bebe_lince_si_no_quieres_verme_enloquecer_7-12.pdf
+  🔍 Analizando con Gemini...
+[Intento 1/3] Usando API key #6
+Error en intento 1 al analizar 'Dame_un_bebe_lince_si_no_quieres_verme_enloquecer_7-12.pdf': 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2
+Please retry in 53.357511553s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 2
+}
+, retry_delay {
+  seconds: 53
+}
+]
+Límite alcanzado, rotando a la siguiente API key...
+[Intento 2/3] Usando API key #7
+Respuesta de Gemini: {
+  "nombre_carpeta_estandarizado": "Dame un bebe lince si no quieres verme enloquecer",
+  "titulo_limpio_archivo": "Dame un bebe lince si no quieres verme enloquecer",
+  "capitulo_o_rango": "7-12",
+ ...
+  📊 Metadatos extraídos:
+     - Serie: Dame un bebe lince si no quieres verme enloquecer
+     - Capítulo: 7-12
+  📁 Carpeta: /opt/MangaRead/Mangas/Dame un bebe lince si no quieres verme enloquecer
+  📝 Nuevo nombre: Dame un bebe lince si no quieres verme enloquecer - Cap. 7-12.pdf
+  🚚 Moviendo archivo...
+  ✅ Archivo organizado correctamente!
+[6/7] ✅ Completado exitosamente
+
+[7/7] ⚙️  Procesando archivo 7 de 7...
+
+📄 Procesando: Weremeerkat_by_Yuguni.pdf
+  🔍 Analizando con Gemini...
+[Intento 1/3] Usando API key #8
+Respuesta de Gemini: {
+  "nombre_carpeta_estandarizado": "Weremeerkat",
+  "titulo_limpio_archivo": "Weremeerkat by Yuguni",
+  "capitulo_o_rango": "ONE_SHOT",
+  "es_secuela_o_extra": false
+}...
+  📊 Metadatos extraídos:
+     - Serie: Weremeerkat
+     - Capítulo: ONE_SHOT
+  📁 Carpeta: /opt/MangaRead/Mangas/Weremeerkat
+  📝 Nuevo nombre: Weremeerkat by Yuguni - Cap. ONE_SHOT.pdf
+  🚚 Moviendo archivo...
+  ✅ Archivo organizado correctamente!
+[7/7] ✅ Completado exitosamente
+
+================================================================================
+📊 RESUMEN FINAL
+================================================================================
+✅ Exitosos: 7/7
+❌ Fallidos: 0/7
+================================================================================
+
+--------------------------------------------------------------------------------
+
+================================================================================
+🚀 NUEVA SOLICITUD DE SUBIDA DE ARCHIVOS
+================================================================================
+📦 Total de archivos recibidos: 1
+
+📥 Guardando archivos...
+  [1/1] Guardando: Liebling.pdf
+  ✅ Guardado correctamente
+
+🤖 Procesando 1 archivo(s) con Gemini...
+100.110.74.37 - - [03/Nov/2025 09:24:21] "POST /upload HTTP/1.1" 200 -
+ * Detected change in '/opt/MangaRead/manga-organizer/process_lote_grande.py', reloading
+--------------------------------------------------------------------------------
+
+================================================================================
+📚 PROCESANDO 1 ARCHIVO(S)
+================================================================================
+
+[1/1] ⚙️  Procesando archivo 1 de 1...
+
+📄 Procesando: Liebling.pdf
+  🔍 Analizando con Gemini...
+[Intento 1/3] Usando API key #9
+Respuesta de Gemini: {
+  "nombre_carpeta_estandarizado": "Liebling",
+  "titulo_limpio_archivo": "Liebling",
+  "capitulo_o_rango": "ONE_SHOT",
+  "es_secuela_o_extra": false
+}...
+  📊 Metadatos extraídos:
+     - Serie: Liebling
+     - Capítulo: ONE_SHOT
+  📁 Carpeta: /opt/MangaRead/Mangas/Liebling
+  📝 Nuevo nombre: Liebling - Cap. ONE_SHOT.pdf
+  🚚 Moviendo archivo...
+  ✅ Archivo organizado correctamente!
+[1/1] ✅ Completado exitosamente
+
+================================================================================
+📊 RESUMEN FINAL
+================================================================================
+✅ Exitosos: 1/1
+❌ Fallidos: 0/1
+================================================================================
+
+--------------------------------------------------------------------------------
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+ * Detected change in '/opt/MangaRead/manga-organizer/config.py', reloading
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+ * Detected change in '/opt/MangaRead/manga-organizer/gemini_organizer.py', reloading
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+ * Detected change in '/opt/MangaRead/manga-organizer/config.py', reloading
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+ * Detected change in '/opt/MangaRead/manga-organizer/process_lote_grande.py', reloading
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+ * Detected change in '/opt/MangaRead/manga-organizer/config.py', reloading
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+ * Detected change in '/opt/MangaRead/manga-organizer/unificar_carpetas.py', reloading
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+ * Detected change in '/opt/MangaRead/manga-organizer/corregir_oneshots.py', reloading
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+ * Detected change in '/opt/MangaRead/manga-organizer/renombrar_one_shot.py', reloading
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+ * Detected change in '/opt/MangaRead/manga-organizer/unificar_carpetas.py', reloading
+🚀 Iniciando Manga Organizer Server...
+📁 Carpeta de subida: /opt/MangaRead/manga-organizer/uploads
+📚 Carpeta de destino: /opt/MangaRead/Mangas
+🤖 Modelo Gemini: gemini-2.5-pro
+🌐 Servidor corriendo en http://0.0.0.0:5000
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 422-832-268
+127.0.0.1 - - [04/Nov/2025 08:54:24] "HEAD / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2025 08:57:51] "[31m[1mHEAD /upload HTTP/1.1[0m" 405 -
+127.0.0.1 - - [04/Nov/2025 08:57:58] "[31m[1mGET /upload HTTP/1.1[0m" 405 -
+127.0.0.1 - - [04/Nov/2025 08:58:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2025 08:59:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2025 17:44:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Nov/2025 09:02:42] "GET / HTTP/1.1" 200 -

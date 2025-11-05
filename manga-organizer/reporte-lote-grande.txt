@@ -1,0 +1,1895 @@
+REPORTE DE PROCESAMIENTO EN LOTE - MANGA ORGANIZER
+================================================================================
+
+Fecha: 2025-11-03 15:03:01
+Carpeta origen: /opt/MangaRead/manga-organizer/Lote grande
+Carpeta destino: /opt/MangaRead/Mangas
+Modelo usado: gemini-2.5-pro
+Tiempo total: 3684.48 segundos
+
+================================================================================
+
+RESUMEN:
+  Total: 310
+  Exitosos: 310
+  Fallidos: 0
+
+================================================================================
+
+ARCHIVOS PROCESADOS EXITOSAMENTE (310):
+
+1. Ghost A Punta De Lanza 1-81.pdf
+   → Carpeta: Ghost A Punta De Lanza
+   → Nuevo nombre: Ghost A Punta De Lanza - Cap. 1-81.pdf
+   → Capítulo: 1-81
+   → Ruta: /opt/MangaRead/Mangas/Ghost A Punta De Lanza/Ghost A Punta De Lanza - Cap. 1-81.pdf
+
+2. La caza.pdf
+   → Carpeta: La caza
+   → Nuevo nombre: La caza - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/La caza/La caza - Cap. ONE_SHOT.pdf
+
+3. La novia del Titan 1-82.pdf
+   → Carpeta: La novia del Titan
+   → Nuevo nombre: La novia del Titan - Cap. 1-82.pdf
+   → Capítulo: 1-82
+   → Ruta: /opt/MangaRead/Mangas/La novia del Titan/La novia del Titan - Cap. 1-82.pdf
+
+4. Purgatorio 86.pdf
+   → Carpeta: Purgatorio
+   → Nuevo nombre: Purgatorio - Cap. 86.pdf
+   → Capítulo: 86
+   → Ruta: /opt/MangaRead/Mangas/Purgatorio/Purgatorio - Cap. 86.pdf
+
+5. Sex And The Furry.pdf
+   → Carpeta: Sex And The Furry
+   → Nuevo nombre: Sex And The Furry - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Sex And The Furry/Sex And The Furry - Cap. ONE_SHOT.pdf
+
+6. Lovin_ Tree.pdf
+   → Carpeta: Lovin Tree
+   → Nuevo nombre: Lovin Tree - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Lovin Tree/Lovin Tree - Cap. DESCONOCIDO.pdf
+
+7. Breeder_s Town By Uro.pdf
+   → Carpeta: Breeder's Town
+   → Nuevo nombre: Breeder's Town By Uro - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Breeder's Town/Breeder's Town By Uro - Cap. ONE_SHOT.pdf
+
+8. Time UP.pdf
+   → Carpeta: Time UP
+   → Nuevo nombre: Time UP - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Time UP/Time UP - Cap. ONE_SHOT.pdf
+
+9. ACTION! Legoshi_s sleepless night.pdf
+   → Carpeta: Legoshi's sleepless night
+   → Nuevo nombre: ACTION! Legoshi's sleepless night - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/Legoshi's sleepless night/ACTION! Legoshi's sleepless night - Cap. ONE_SHOT.pdf
+
+10. Secret Tale of the Mercenary – Grimoire of Zero x Nekojishi dj.pdf
+   → Carpeta: Grimoire of Zero x Nekojishi
+   → Nuevo nombre: Secret Tale of the Mercenary – Grimoire of Zero x Nekojishi dj - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/Grimoire of Zero x Nekojishi/Secret Tale of the Mercenary – Grimoire of Zero x Nekojishi dj - Cap. ONE_SHOT.pdf
+
+11. Cita a ciegas. Blind Date.pdf
+   → Carpeta: Cita a ciegas
+   → Nuevo nombre: Cita a ciegas. Blind Date - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Cita a ciegas/Cita a ciegas. Blind Date - Cap. ONE_SHOT.pdf
+
+12. Dark Taming.pdf
+   → Carpeta: Dark Taming
+   → Nuevo nombre: Dark Taming - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Dark Taming/Dark Taming - Cap. DESCONOCIDO.pdf
+
+13. Man Eat ALL!.pdf
+   → Carpeta: Man Eat ALL!
+   → Nuevo nombre: Man Eat ALL! - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Man Eat ALL!/Man Eat ALL! - Cap. ONE_SHOT.pdf
+
+14. SINK INTO 1.pdf
+   → Carpeta: SINK INTO
+   → Nuevo nombre: SINK INTO - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/SINK INTO/SINK INTO - Cap. 1.pdf
+
+15. Some Like It Hot Spring.pdf
+   → Carpeta: Some Like It Hot Spring
+   → Nuevo nombre: Some Like It Hot Spring - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Some Like It Hot Spring/Some Like It Hot Spring - Cap. ONE_SHOT.pdf
+
+16. Demoness.pdf
+   → Carpeta: Demoness
+   → Nuevo nombre: Demoness - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Demoness/Demoness - Cap. ONE_SHOT.pdf
+
+17. Yamato Beasts 2.pdf
+   → Carpeta: Yamato Beasts
+   → Nuevo nombre: Yamato Beasts - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Yamato Beasts/Yamato Beasts - Cap. 2.pdf
+
+18. The Hornies CH1.pdf
+   → Carpeta: The Hornies
+   → Nuevo nombre: The Hornies - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/The Hornies/The Hornies - Cap. 1.pdf
+
+19. Amateur.pdf
+   → Carpeta: Amateur
+   → Nuevo nombre: Amateur - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Amateur/Amateur - Cap. ONE_SHOT.pdf
+
+20. Manga 02.pdf
+   → Carpeta: Manga
+   → Nuevo nombre: Manga - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Manga/Manga - Cap. 2.pdf
+
+21. Say Uncle.pdf
+   → Carpeta: Say Uncle
+   → Nuevo nombre: Say Uncle - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Say Uncle/Say Uncle - Cap. ONE_SHOT.pdf
+
+22. 2022 April rewards.pdf
+   → Carpeta: 2022 April rewards
+   → Nuevo nombre: 2022 April rewards - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/2022 April rewards/2022 April rewards - Cap. DESCONOCIDO.pdf
+
+23. ¿Crees En Los Espíritus Malignos! 24-25.pdf
+   → Carpeta: ¿Crees En Los Espíritus Malignos
+   → Nuevo nombre: ¿Crees En Los Espíritus Malignos! - Cap. 24-25.pdf
+   → Capítulo: 24-25
+   → Ruta: /opt/MangaRead/Mangas/¿Crees En Los Espíritus Malignos/¿Crees En Los Espíritus Malignos! - Cap. 24-25.pdf
+
+24. With friends like these.pdf
+   → Carpeta: With friends like these
+   → Nuevo nombre: With friends like these - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/With friends like these/With friends like these - Cap. ONE_SHOT.pdf
+
+25. Work From Home.pdf
+   → Carpeta: Work From Home
+   → Nuevo nombre: Work From Home - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Work From Home/Work From Home - Cap. DESCONOCIDO.pdf
+
+26. Romance on the Sofa.pdf
+   → Carpeta: Romance on the Sofa
+   → Nuevo nombre: Romance on the Sofa - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Romance on the Sofa/Romance on the Sofa - Cap. ONE_SHOT.pdf
+
+27. Familiar Taste Volume 1.pdf
+   → Carpeta: Familiar Taste
+   → Nuevo nombre: Familiar Taste - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/Familiar Taste/Familiar Taste - Cap. 1.pdf
+
+28. Burnt Metal.pdf
+   → Carpeta: Burnt Metal
+   → Nuevo nombre: Burnt Metal - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Burnt Metal/Burnt Metal - Cap. DESCONOCIDO.pdf
+
+29. Boys night.pdf
+   → Carpeta: Boys night
+   → Nuevo nombre: Boys night - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Boys night/Boys night - Cap. ONE_SHOT.pdf
+
+30. Forest Hunt.pdf
+   → Carpeta: Forest Hunt
+   → Nuevo nombre: Forest Hunt - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Forest Hunt/Forest Hunt - Cap. ONE_SHOT.pdf
+
+31. La Guarida del Tigre 1-2.pdf
+   → Carpeta: La Guarida del Tigre
+   → Nuevo nombre: La Guarida del Tigre - Cap. 1-2.pdf
+   → Capítulo: 1-2
+   → Ruta: /opt/MangaRead/Mangas/La Guarida del Tigre/La Guarida del Tigre - Cap. 1-2.pdf
+
+32. Caramelo de ciruela.pdf
+   → Carpeta: Caramelo de ciruela
+   → Nuevo nombre: Caramelo de ciruela - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Caramelo de ciruela/Caramelo de ciruela - Cap. ONE_SHOT.pdf
+
+33. Devotion (1).pdf
+   → Carpeta: Devotion
+   → Nuevo nombre: Devotion - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/Devotion/Devotion - Cap. 1.pdf
+
+34. By Chance!.pdf
+   → Carpeta: By Chance
+   → Nuevo nombre: By Chance! - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/By Chance/By Chance! - Cap. ONE_SHOT.pdf
+
+35. Hachi Duchi El colegio de caballeros escribirá una novela con el.pdf
+   → Carpeta: Hachi Duchi El colegio de caballeros escribirá una novela con el
+   → Nuevo nombre: Hachi Duchi El colegio de caballeros escribirá una novela con el - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Hachi Duchi El colegio de caballeros escribirá una novela con el/Hachi Duchi El colegio de caballeros escribirá una novela con el - Cap. ONE_SHOT.pdf
+
+36. El Cuarteto.pdf
+   → Carpeta: El Cuarteto
+   → Nuevo nombre: El Cuarteto - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/El Cuarteto/El Cuarteto - Cap. DESCONOCIDO.pdf
+
+37. Chico Lobo 7.pdf
+   → Carpeta: Chico Lobo
+   → Nuevo nombre: Chico Lobo - Cap. 7.pdf
+   → Capítulo: 7
+   → Ruta: /opt/MangaRead/Mangas/Chico Lobo/Chico Lobo - Cap. 7.pdf
+
+38. WilliamxTennessee.pdf
+   → Carpeta: WilliamxTennessee
+   → Nuevo nombre: WilliamxTennessee - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/WilliamxTennessee/WilliamxTennessee - Cap. ONE_SHOT.pdf
+
+39. La Ruina de Rackon Seth iova.pdf
+   → Carpeta: La Ruina de Rackon Seth
+   → Nuevo nombre: La Ruina de Rackon Seth iova - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/La Ruina de Rackon Seth/La Ruina de Rackon Seth iova - Cap. DESCONOCIDO.pdf
+
+40. Pride Fest.pdf
+   → Carpeta: Pride Fest
+   → Nuevo nombre: Pride Fest - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Pride Fest/Pride Fest - Cap. ONE_SHOT.pdf
+
+41. Black Watch.pdf
+   → Carpeta: Black Watch
+   → Nuevo nombre: Black Watch - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Black Watch/Black Watch - Cap. DESCONOCIDO.pdf
+
+42. Dominar el mundo con una sola Poción 1-4.pdf
+   → Carpeta: Dominar el mundo con una sola Poción
+   → Nuevo nombre: Dominar el mundo con una sola Poción - Cap. 1-4.pdf
+   → Capítulo: 1-4
+   → Ruta: /opt/MangaRead/Mangas/Dominar el mundo con una sola Poción/Dominar el mundo con una sola Poción - Cap. 1-4.pdf
+
+43. EmBEARasing moment.pdf
+   → Carpeta: EmBEARasing moment
+   → Nuevo nombre: EmBEARasing moment - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/EmBEARasing moment/EmBEARasing moment - Cap. ONE_SHOT.pdf
+
+44. El hermano oso en la obra.pdf
+   → Carpeta: El hermano oso en la obra
+   → Nuevo nombre: El hermano oso en la obra - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/El hermano oso en la obra/El hermano oso en la obra - Cap. ONE_SHOT.pdf
+
+45. Publicly humiliate a yakuza boss – Chinese.pdf
+   → Carpeta: Publicly humiliate a yakuza boss
+   → Nuevo nombre: Publicly humiliate a yakuza boss – Chinese - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Publicly humiliate a yakuza boss/Publicly humiliate a yakuza boss – Chinese - Cap. ONE_SHOT.pdf
+
+46. Vivo o muerto.pdf
+   → Carpeta: Vivo o muerto
+   → Nuevo nombre: Vivo o muerto - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Vivo o muerto/Vivo o muerto - Cap. DESCONOCIDO.pdf
+
+47. My Mate.pdf
+   → Carpeta: My Mate
+   → Nuevo nombre: My Mate - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/My Mate/My Mate - Cap. DESCONOCIDO.pdf
+
+48. El Novio Real 1-7.pdf
+   → Carpeta: El Novio Real
+   → Nuevo nombre: El Novio Real - Cap. 1-7.pdf
+   → Capítulo: 1-7
+   → Ruta: /opt/MangaRead/Mangas/El Novio Real/El Novio Real - Cap. 1-7.pdf
+
+49. The alpha_s mate comprimido 1-49.pdf
+   → Carpeta: The Alpha's Mate
+   → Nuevo nombre: The Alpha's Mate - Cap. 1-49.pdf
+   → Capítulo: 1-49
+   → Ruta: /opt/MangaRead/Mangas/The Alpha's Mate/The Alpha's Mate - Cap. 1-49.pdf
+
+50. Shirai kun no Shakai Kengaku 2.pdf
+   → Carpeta: Shirai kun no Shakai Kengaku
+   → Nuevo nombre: Shirai kun no Shakai Kengaku - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Shirai kun no Shakai Kengaku/Shirai kun no Shakai Kengaku - Cap. 2.pdf
+
+51. Foxdale Frights.pdf
+   → Carpeta: Foxdale Frights
+   → Nuevo nombre: Foxdale Frights - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Foxdale Frights/Foxdale Frights - Cap. DESCONOCIDO.pdf
+
+52. BeastsrS EX.pdf
+   → Carpeta: Beastars
+   → Nuevo nombre: Beastars EX - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/Beastars/Beastars EX - Cap. DESCONOCIDO.pdf
+
+53. Curse of the Were Coop.pdf
+   → Carpeta: Curse of the Were Coop
+   → Nuevo nombre: Curse of the Were Coop - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Curse of the Were Coop/Curse of the Were Coop - Cap. ONE_SHOT.pdf
+
+54. Dream Up (1).pdf
+   → Carpeta: Dream Up
+   → Nuevo nombre: Dream Up - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/Dream Up/Dream Up - Cap. 1.pdf
+
+55. Chief_s hot sauna.pdf
+   → Carpeta: Chief's Hot Sauna
+   → Nuevo nombre: Chief's hot sauna - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Chief's Hot Sauna/Chief's hot sauna - Cap. ONE_SHOT.pdf
+
+56. After Gym.pdf
+   → Carpeta: After Gym
+   → Nuevo nombre: After Gym - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/After Gym/After Gym - Cap. DESCONOCIDO.pdf
+
+57. Primer contacto.pdf
+   → Carpeta: Primer contacto
+   → Nuevo nombre: Primer contacto - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Primer contacto/Primer contacto - Cap. ONE_SHOT.pdf
+
+58. Bienvenido a casa.pdf
+   → Carpeta: Bienvenido a casa
+   → Nuevo nombre: Bienvenido a casa - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Bienvenido a casa/Bienvenido a casa - Cap. ONE_SHOT.pdf
+
+59. The Demon Lord Want You!.pdf
+   → Carpeta: The Demon Lord Want You!
+   → Nuevo nombre: The Demon Lord Want You! - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/The Demon Lord Want You!/The Demon Lord Want You! - Cap. ONE_SHOT.pdf
+
+60. Three Ways.pdf
+   → Carpeta: Three Ways
+   → Nuevo nombre: Three Ways - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Three Ways/Three Ways - Cap. DESCONOCIDO.pdf
+
+61. Fever Saturday.pdf
+   → Carpeta: Fever Saturday
+   → Nuevo nombre: Fever Saturday - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Fever Saturday/Fever Saturday - Cap. ONE_SHOT.pdf
+
+62. Juuma Retsuden Legend of the Demon Beast.pdf
+   → Carpeta: Juuma Retsuden
+   → Nuevo nombre: Juuma Retsuden Legend of the Demon Beast - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Juuma Retsuden/Juuma Retsuden Legend of the Demon Beast - Cap. DESCONOCIDO.pdf
+
+63. Dream Hunt.pdf
+   → Carpeta: Dream Hunt
+   → Nuevo nombre: Dream Hunt - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Dream Hunt/Dream Hunt - Cap. DESCONOCIDO.pdf
+
+64. Just Fairy Tales 2.pdf
+   → Carpeta: Just Fairy Tales
+   → Nuevo nombre: Just Fairy Tales - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Just Fairy Tales/Just Fairy Tales - Cap. 2.pdf
+
+65. Midnight Doppleganger.pdf
+   → Carpeta: Midnight Doppleganger
+   → Nuevo nombre: Midnight Doppleganger - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Midnight Doppleganger/Midnight Doppleganger - Cap. ONE_SHOT.pdf
+
+66. Tight Security.pdf
+   → Carpeta: Tight Security
+   → Nuevo nombre: Tight Security - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Tight Security/Tight Security - Cap. DESCONOCIDO.pdf
+
+67. Mother_s Spirit Capítulo 1-12.pdf
+   → Carpeta: Mother's Spirit
+   → Nuevo nombre: Mother's Spirit - Cap. 1-12.pdf
+   → Capítulo: 1-12
+   → Ruta: /opt/MangaRead/Mangas/Mother's Spirit/Mother's Spirit - Cap. 1-12.pdf
+
+68. Rey Demonio X Aventurero 1-6.pdf
+   → Carpeta: Rey Demonio X Aventurero
+   → Nuevo nombre: Rey Demonio X Aventurero - Cap. 1-6.pdf
+   → Capítulo: 1-6
+   → Ruta: /opt/MangaRead/Mangas/Rey Demonio X Aventurero/Rey Demonio X Aventurero - Cap. 1-6.pdf
+
+69. Finding Family 1.pdf
+   → Carpeta: Finding Family
+   → Nuevo nombre: Finding Family - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/Finding Family/Finding Family - Cap. 1.pdf
+
+70. Pushing LIMITS.pdf
+   → Carpeta: Pushing LIMITS
+   → Nuevo nombre: Pushing LIMITS - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Pushing LIMITS/Pushing LIMITS - Cap. DESCONOCIDO.pdf
+
+71. Comic del Señor Woods .pdf
+   → Carpeta: Comic del Señor Woods
+   → Nuevo nombre: Comic del Señor Woods - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Comic del Señor Woods/Comic del Señor Woods - Cap. DESCONOCIDO.pdf
+
+72. Star Riders.pdf
+   → Carpeta: Star Riders
+   → Nuevo nombre: Star Riders - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Star Riders/Star Riders - Cap. DESCONOCIDO.pdf
+
+73. Boomer_s Big Date.pdf
+   → Carpeta: Boomer's Big Date
+   → Nuevo nombre: Boomer's Big Date - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Boomer's Big Date/Boomer's Big Date - Cap. ONE_SHOT.pdf
+
+74. Psylocke x Venom.pdf
+   → Carpeta: Psylocke x Venom
+   → Nuevo nombre: Psylocke x Venom - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/Psylocke x Venom/Psylocke x Venom - Cap. ONE_SHOT.pdf
+
+75. Setting up the bait I.pdf
+   → Carpeta: Setting up the bait
+   → Nuevo nombre: Setting up the bait - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/Setting up the bait/Setting up the bait - Cap. 1.pdf
+
+76. WORK UP.pdf
+   → Carpeta: WORK UP
+   → Nuevo nombre: WORK UP - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/WORK UP/WORK UP - Cap. DESCONOCIDO.pdf
+
+77. Sin tu permiso.pdf
+   → Carpeta: Sin tu permiso
+   → Nuevo nombre: Sin tu permiso - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Sin tu permiso/Sin tu permiso - Cap. DESCONOCIDO.pdf
+
+78. Pure Bone of Friendship.pdf
+   → Carpeta: Pure Bone of Friendship
+   → Nuevo nombre: Pure Bone of Friendship - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Pure Bone of Friendship/Pure Bone of Friendship - Cap. ONE_SHOT.pdf
+
+79. Primera vez.pdf
+   → Carpeta: Primera vez
+   → Nuevo nombre: Primera vez - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Primera vez/Primera vez - Cap. ONE_SHOT.pdf
+
+80. nani kashira no shokushu kinoko kono otoko ore no ko haramemasu.pdf
+   → Carpeta: Nani Kashira no Shokushu Kinoko Kono Otoko Ore no Ko Haramemasu
+   → Nuevo nombre: Nani Kashira no Shokushu Kinoko Kono Otoko Ore no Ko Haramemasu - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Nani Kashira no Shokushu Kinoko Kono Otoko Ore no Ko Haramemasu/Nani Kashira no Shokushu Kinoko Kono Otoko Ore no Ko Haramemasu - Cap. ONE_SHOT.pdf
+
+81. Lush Puppies 3.pdf
+   → Carpeta: Lush Puppies
+   → Nuevo nombre: Lush Puppies - Cap. 3.pdf
+   → Capítulo: 3
+   → Ruta: /opt/MangaRead/Mangas/Lush Puppies/Lush Puppies - Cap. 3.pdf
+
+82. La noche aún no termina.pdf
+   → Carpeta: La noche aún no termina
+   → Nuevo nombre: La noche aún no termina - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/La noche aún no termina/La noche aún no termina - Cap. ONE_SHOT.pdf
+
+83. Breeding Farm 3.pdf
+   → Carpeta: Breeding Farm
+   → Nuevo nombre: Breeding Farm - Cap. 3.pdf
+   → Capítulo: 3
+   → Ruta: /opt/MangaRead/Mangas/Breeding Farm/Breeding Farm - Cap. 3.pdf
+
+84. Tempted.pdf
+   → Carpeta: Tempted
+   → Nuevo nombre: Tempted - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Tempted/Tempted - Cap. ONE_SHOT.pdf
+
+85. Pupsicle.pdf
+   → Carpeta: Pupsicle
+   → Nuevo nombre: Pupsicle - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Pupsicle/Pupsicle - Cap. ONE_SHOT.pdf
+
+86. Dragon Sized 2.pdf
+   → Carpeta: Dragon Sized
+   → Nuevo nombre: Dragon Sized - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Dragon Sized/Dragon Sized - Cap. 2.pdf
+
+87. Sex is troublesome after all.pdf
+   → Carpeta: Sex is troublesome after all
+   → Nuevo nombre: Sex is troublesome after all - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Sex is troublesome after all/Sex is troublesome after all - Cap. DESCONOCIDO.pdf
+
+88. 9ANIMALS 2.pdf
+   → Carpeta: 9ANIMALS
+   → Nuevo nombre: 9ANIMALS - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/9ANIMALS/9ANIMALS - Cap. 2.pdf
+
+89. Guía para enemas en español.pdf
+   → Carpeta: Guía para enemas
+   → Nuevo nombre: Guía para enemas en español - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Guía para enemas/Guía para enemas en español - Cap. DESCONOCIDO.pdf
+
+90. Backlight T1.pdf
+   → Carpeta: Backlight
+   → Nuevo nombre: Backlight - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/Backlight/Backlight - Cap. 1.pdf
+
+91. cute boy.pdf
+   → Carpeta: Cute Boy
+   → Nuevo nombre: Cute Boy - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Cute Boy/Cute Boy - Cap. ONE_SHOT.pdf
+
+92. Gloryhole sex with the cuntboy neighbor.pdf
+   → Carpeta: Gloryhole sex with the cuntboy neighbor
+   → Nuevo nombre: Gloryhole sex with the cuntboy neighbor - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Gloryhole sex with the cuntboy neighbor/Gloryhole sex with the cuntboy neighbor - Cap. ONE_SHOT.pdf
+
+93. Welcome to our gang.pdf
+   → Carpeta: Welcome to our gang
+   → Nuevo nombre: Welcome to our gang - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Welcome to our gang/Welcome to our gang - Cap. DESCONOCIDO.pdf
+
+94. Rudolph new year_s party.pdf
+   → Carpeta: Rudolph New Year's Party
+   → Nuevo nombre: Rudolph New Year's Party - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/Rudolph New Year's Party/Rudolph New Year's Party - Cap. ONE_SHOT.pdf
+
+95. La granja del Señor A 1-15.pdf
+   → Carpeta: La granja del Señor A
+   → Nuevo nombre: La granja del Señor A - Cap. 1-15.pdf
+   → Capítulo: 1-15
+   → Ruta: /opt/MangaRead/Mangas/La granja del Señor A/La granja del Señor A - Cap. 1-15.pdf
+
+96. Roommate_s Socks.pdf
+   → Carpeta: Roommate's Socks
+   → Nuevo nombre: Roommate's Socks - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Roommate's Socks/Roommate's Socks - Cap. ONE_SHOT.pdf
+
+97. La historia secreta del mercenario.pdf
+   → Carpeta: La historia secreta del mercenario
+   → Nuevo nombre: La historia secreta del mercenario - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/La historia secreta del mercenario/La historia secreta del mercenario - Cap. DESCONOCIDO.pdf
+
+98. Table for three.pdf
+   → Carpeta: Table for three
+   → Nuevo nombre: Table for three - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Table for three/Table for three - Cap. ONE_SHOT.pdf
+
+99. What a twist!.pdf
+   → Carpeta: What a twist!
+   → Nuevo nombre: What a twist! - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/What a twist!/What a twist! - Cap. ONE_SHOT.pdf
+
+100. Alta Suciedad.pdf
+   → Carpeta: Alta Suciedad
+   → Nuevo nombre: Alta Suciedad - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Alta Suciedad/Alta Suciedad - Cap. ONE_SHOT.pdf
+
+101. Crush and Burn 1-101.pdf
+   → Carpeta: Crush and Burn
+   → Nuevo nombre: Crush and Burn - Cap. 1-101.pdf
+   → Capítulo: 1-101
+   → Ruta: /opt/MangaRead/Mangas/Crush and Burn/Crush and Burn - Cap. 1-101.pdf
+
+102. Weremeerkat.pdf
+   → Carpeta: Weremeerkat
+   → Nuevo nombre: Weremeerkat - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Weremeerkat/Weremeerkat - Cap. ONE_SHOT.pdf
+
+103. Samurott.pdf
+   → Carpeta: Samurott
+   → Nuevo nombre: Samurott - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Samurott/Samurott - Cap. DESCONOCIDO.pdf
+
+104. Izzy & Earl.pdf
+   → Carpeta: Izzy & Earl
+   → Nuevo nombre: Izzy & Earl - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Izzy & Earl/Izzy & Earl - Cap. ONE_SHOT.pdf
+
+105. Seducción al Vapor.pdf
+   → Carpeta: Seducción al Vapor
+   → Nuevo nombre: Seducción al Vapor - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Seducción al Vapor/Seducción al Vapor - Cap. ONE_SHOT.pdf
+
+106. Detrás de la Puerta número dos.pdf
+   → Carpeta: Detrás de la Puerta
+   → Nuevo nombre: Detrás de la Puerta - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Detrás de la Puerta/Detrás de la Puerta - Cap. 2.pdf
+
+107. Fire Up.pdf
+   → Carpeta: Fire Up
+   → Nuevo nombre: Fire Up - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Fire Up/Fire Up - Cap. ONE_SHOT.pdf
+
+108. Shower shy.pdf
+   → Carpeta: Shower shy
+   → Nuevo nombre: Shower shy - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Shower shy/Shower shy - Cap. ONE_SHOT.pdf
+
+109. Binkan Danshi Mesu Ochi Zecchou Massage.pdf
+   → Carpeta: Binkan Danshi Mesu Ochi Zecchou Massage
+   → Nuevo nombre: Binkan Danshi Mesu Ochi Zecchou Massage - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Binkan Danshi Mesu Ochi Zecchou Massage/Binkan Danshi Mesu Ochi Zecchou Massage - Cap. ONE_SHOT.pdf
+
+110. El recluta.pdf
+   → Carpeta: El recluta
+   → Nuevo nombre: El recluta - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/El recluta/El recluta - Cap. DESCONOCIDO.pdf
+
+111. Dawn of a New Life.pdf
+   → Carpeta: Dawn of a New Life
+   → Nuevo nombre: Dawn of a New Life - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Dawn of a New Life/Dawn of a New Life - Cap. DESCONOCIDO.pdf
+
+112. WILD STYLE Ross Aniki no Himitsu Haishin • Los Streams Secretos.pdf
+   → Carpeta: WILD STYLE
+   → Nuevo nombre: WILD STYLE Ross Aniki no Himitsu Haishin • Los Streams Secretos - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/WILD STYLE/WILD STYLE Ross Aniki no Himitsu Haishin • Los Streams Secretos - Cap. ONE_SHOT.pdf
+
+113. The bed guys.pdf
+   → Carpeta: The Bed Guys
+   → Nuevo nombre: The Bed Guys - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/The Bed Guys/The Bed Guys - Cap. DESCONOCIDO.pdf
+
+114. VERANO RCP.pdf
+   → Carpeta: VERANO RCP
+   → Nuevo nombre: VERANO RCP - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/VERANO RCP/VERANO RCP - Cap. ONE_SHOT.pdf
+
+115. Dino milking.pdf
+   → Carpeta: Dino milking
+   → Nuevo nombre: Dino milking - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Dino milking/Dino milking - Cap. ONE_SHOT.pdf
+
+116. BOUNCED.pdf
+   → Carpeta: BOUNCED
+   → Nuevo nombre: BOUNCED - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/BOUNCED/BOUNCED - Cap. ONE_SHOT.pdf
+
+117. Lobo_s Last Wish.pdf
+   → Carpeta: Lobo's Last Wish
+   → Nuevo nombre: Lobo's Last Wish - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Lobo's Last Wish/Lobo's Last Wish - Cap. ONE_SHOT.pdf
+
+118. Bodega Cat.pdf
+   → Carpeta: Bodega Cat
+   → Nuevo nombre: Bodega Cat - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Bodega Cat/Bodega Cat - Cap. DESCONOCIDO.pdf
+
+119. Dress to undress.pdf
+   → Carpeta: Dress to undress
+   → Nuevo nombre: Dress to undress - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Dress to undress/Dress to undress - Cap. ONE_SHOT.pdf
+
+120. La novia del titan 157-162.pdf
+   → Carpeta: La novia del titan
+   → Nuevo nombre: La novia del titan - Cap. 157-162.pdf
+   → Capítulo: 157-162
+   → Ruta: /opt/MangaRead/Mangas/La novia del titan/La novia del titan - Cap. 157-162.pdf
+
+121. Captive.pdf
+   → Carpeta: Captive
+   → Nuevo nombre: Captive - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Captive/Captive - Cap. ONE_SHOT.pdf
+
+122. 9ANIMALS 5.pdf
+   → Carpeta: 9ANIMALS
+   → Nuevo nombre: 9ANIMALS - Cap. 5.pdf
+   → Capítulo: 5
+   → Ruta: /opt/MangaRead/Mangas/9ANIMALS/9ANIMALS - Cap. 5.pdf
+
+123. RIDING MY FRIENDS.pdf
+   → Carpeta: RIDING MY FRIENDS
+   → Nuevo nombre: RIDING MY FRIENDS - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/RIDING MY FRIENDS/RIDING MY FRIENDS - Cap. DESCONOCIDO.pdf
+
+124. Vamos A Jugar Con Hakdo 1-46.pdf
+   → Carpeta: Vamos A Jugar Con Hakdo
+   → Nuevo nombre: Vamos A Jugar Con Hakdo - Cap. 1-46.pdf
+   → Capítulo: 1-46
+   → Ruta: /opt/MangaRead/Mangas/Vamos A Jugar Con Hakdo/Vamos A Jugar Con Hakdo - Cap. 1-46.pdf
+
+125. Sex And The Furry 2.pdf
+   → Carpeta: Sex And The Furry
+   → Nuevo nombre: Sex And The Furry - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Sex And The Furry/Sex And The Furry - Cap. 2.pdf
+
+126. La esposa de bongchon.pdf
+   → Carpeta: La esposa de bongchon
+   → Nuevo nombre: La esposa de bongchon - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/La esposa de bongchon/La esposa de bongchon - Cap. DESCONOCIDO.pdf
+
+127. La granja del Señor A 16.pdf
+   → Carpeta: La granja del Señor A
+   → Nuevo nombre: La granja del Señor A - Cap. 16.pdf
+   → Capítulo: 16
+   → Ruta: /opt/MangaRead/Mangas/La granja del Señor A/La granja del Señor A - Cap. 16.pdf
+
+128. Calentamiento II.pdf
+   → Carpeta: Calentamiento
+   → Nuevo nombre: Calentamiento II - Cap. 2.pdf
+   → Capítulo: 2
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/Calentamiento/Calentamiento II - Cap. 2.pdf
+
+129. Hermanos en armas.pdf
+   → Carpeta: Hermanos en armas
+   → Nuevo nombre: Hermanos en armas - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Hermanos en armas/Hermanos en armas - Cap. ONE_SHOT.pdf
+
+130. Yesterday_s friend is today.pdf
+   → Carpeta: Yesterday s friend is today
+   → Nuevo nombre: Yesterday s friend is today - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Yesterday s friend is today/Yesterday s friend is today - Cap. ONE_SHOT.pdf
+
+131. SINK INTO 2.pdf
+   → Carpeta: SINK INTO
+   → Nuevo nombre: SINK INTO - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/SINK INTO/SINK INTO - Cap. 2.pdf
+
+132. Public Restroom.pdf
+   → Carpeta: Public Restroom
+   → Nuevo nombre: Public Restroom - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Public Restroom/Public Restroom - Cap. ONE_SHOT.pdf
+
+133. Pokémon spa.pdf
+   → Carpeta: Pokémon
+   → Nuevo nombre: Pokémon spa - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Pokémon/Pokémon spa - Cap. DESCONOCIDO.pdf
+
+134. SHIROKUMA KUN TO IROUSAGI.pdf
+   → Carpeta: SHIROKUMA KUN TO IROUSAGI
+   → Nuevo nombre: SHIROKUMA KUN TO IROUSAGI - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/SHIROKUMA KUN TO IROUSAGI/SHIROKUMA KUN TO IROUSAGI - Cap. DESCONOCIDO.pdf
+
+135. Cash or Credit 1-6.pdf
+   → Carpeta: Cash or Credit
+   → Nuevo nombre: Cash or Credit - Cap. 1-6.pdf
+   → Capítulo: 1-6
+   → Ruta: /opt/MangaRead/Mangas/Cash or Credit/Cash or Credit - Cap. 1-6.pdf
+
+136. Setting up the bait 2.pdf
+   → Carpeta: Setting up the bait
+   → Nuevo nombre: Setting up the bait - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Setting up the bait/Setting up the bait - Cap. 2.pdf
+
+137. El Juguete Del Gran Duque 1-38.pdf
+   → Carpeta: El Juguete Del Gran Duque
+   → Nuevo nombre: El Juguete Del Gran Duque - Cap. 1-38.pdf
+   → Capítulo: 1-38
+   → Ruta: /opt/MangaRead/Mangas/El Juguete Del Gran Duque/El Juguete Del Gran Duque - Cap. 1-38.pdf
+
+138. Big Pecs Crisis.pdf
+   → Carpeta: Big Pecs Crisis
+   → Nuevo nombre: Big Pecs Crisis - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Big Pecs Crisis/Big Pecs Crisis - Cap. ONE_SHOT.pdf
+
+139. Daddy_s Date.pdf
+   → Carpeta: Daddy s Date
+   → Nuevo nombre: Daddy s Date - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Daddy s Date/Daddy s Date - Cap. ONE_SHOT.pdf
+
+140. Alerta Amber 1-40.pdf
+   → Carpeta: Alerta Amber
+   → Nuevo nombre: Alerta Amber - Cap. 1-40.pdf
+   → Capítulo: 1-40
+   → Ruta: /opt/MangaRead/Mangas/Alerta Amber/Alerta Amber - Cap. 1-40.pdf
+
+141. Rebel Hero.pdf
+   → Carpeta: Rebel Hero
+   → Nuevo nombre: Rebel Hero - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Rebel Hero/Rebel Hero - Cap. DESCONOCIDO.pdf
+
+142. Kaii-san to Asuka-kun no Ohanashi 1-17.pdf
+   → Carpeta: Kaii-san to Asuka-kun no Ohanashi
+   → Nuevo nombre: Kaii-san to Asuka-kun no Ohanashi - Cap. 1-17.pdf
+   → Capítulo: 1-17
+   → Ruta: /opt/MangaRead/Mangas/Kaii-san to Asuka-kun no Ohanashi/Kaii-san to Asuka-kun no Ohanashi - Cap. 1-17.pdf
+
+143. DEEP INVESTIGATION.pdf
+   → Carpeta: DEEP INVESTIGATION
+   → Nuevo nombre: DEEP INVESTIGATION - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/DEEP INVESTIGATION/DEEP INVESTIGATION - Cap. DESCONOCIDO.pdf
+
+144. IMPURE THOUGTS.pdf
+   → Carpeta: Impure Thoughts
+   → Nuevo nombre: IMPURE THOUGTS - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Impure Thoughts/IMPURE THOUGTS - Cap. DESCONOCIDO.pdf
+
+145. SUCCUMB!.pdf
+   → Carpeta: SUCCUMB!
+   → Nuevo nombre: SUCCUMB! - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/SUCCUMB!/SUCCUMB! - Cap. ONE_SHOT.pdf
+
+146. Gato y Lobo.pdf
+   → Carpeta: Gato y Lobo
+   → Nuevo nombre: Gato y Lobo - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Gato y Lobo/Gato y Lobo - Cap. ONE_SHOT.pdf
+
+147. HEROtic.pdf
+   → Carpeta: HEROtic
+   → Nuevo nombre: HEROtic - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/HEROtic/HEROtic - Cap. ONE_SHOT.pdf
+
+148. Hopes and Dreemurrs.pdf
+   → Carpeta: Hopes and Dreemurrs
+   → Nuevo nombre: Hopes and Dreemurrs - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Hopes and Dreemurrs/Hopes and Dreemurrs - Cap. ONE_SHOT.pdf
+
+149. Tar and Feathers.pdf
+   → Carpeta: Tar and Feathers
+   → Nuevo nombre: Tar and Feathers - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Tar and Feathers/Tar and Feathers - Cap. ONE_SHOT.pdf
+
+150. Willy red & three bears.pdf
+   → Carpeta: Willy Red & Three Bears
+   → Nuevo nombre: Willy red & three bears - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Willy Red & Three Bears/Willy red & three bears - Cap. ONE_SHOT.pdf
+
+151. La Esposa del Tigre 1-12.pdf
+   → Carpeta: La Esposa del Tigre
+   → Nuevo nombre: La Esposa del Tigre - Cap. 1-12.pdf
+   → Capítulo: 1-12
+   → Ruta: /opt/MangaRead/Mangas/La Esposa del Tigre/La Esposa del Tigre - Cap. 1-12.pdf
+
+152. Asmodeus no Toba.pdf
+   → Carpeta: Asmodeus no Toba
+   → Nuevo nombre: Asmodeus no Toba - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Asmodeus no Toba/Asmodeus no Toba - Cap. ONE_SHOT.pdf
+
+153. Invitado no invitado.pdf
+   → Carpeta: Invitado no invitado
+   → Nuevo nombre: Invitado no invitado - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Invitado no invitado/Invitado no invitado - Cap. ONE_SHOT.pdf
+
+154. Hopper_s The Birthday Boy.pdf
+   → Carpeta: Hopper's The Birthday Boy
+   → Nuevo nombre: Hopper's The Birthday Boy - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Hopper's The Birthday Boy/Hopper's The Birthday Boy - Cap. ONE_SHOT.pdf
+
+155. Break.pdf
+   → Carpeta: Break
+   → Nuevo nombre: Break - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Break/Break - Cap. ONE_SHOT.pdf
+
+156. Sock blocked.pdf
+   → Carpeta: Sock blocked
+   → Nuevo nombre: Sock blocked - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Sock blocked/Sock blocked - Cap. ONE_SHOT.pdf
+
+157. KRAMPUS, El visitante de la Navidad .pdf
+   → Carpeta: KRAMPUS
+   → Nuevo nombre: KRAMPUS, El visitante de la Navidad - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/KRAMPUS/KRAMPUS, El visitante de la Navidad - Cap. ONE_SHOT.pdf
+
+158. Chacal el chacal.pdf
+   → Carpeta: Chacal el chacal
+   → Nuevo nombre: Chacal el chacal - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Chacal el chacal/Chacal el chacal - Cap. DESCONOCIDO.pdf
+
+159. La Excursión.pdf
+   → Carpeta: La Excursión
+   → Nuevo nombre: La Excursión - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/La Excursión/La Excursión - Cap. ONE_SHOT.pdf
+
+160. Taiyou to Boku.pdf
+   → Carpeta: Taiyou to Boku
+   → Nuevo nombre: Taiyou to Boku - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Taiyou to Boku/Taiyou to Boku - Cap. ONE_SHOT.pdf
+
+161. A Reindeer_s Revelry.pdf
+   → Carpeta: A Reindeer's Revelry
+   → Nuevo nombre: A Reindeer's Revelry - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/A Reindeer's Revelry/A Reindeer's Revelry - Cap. ONE_SHOT.pdf
+
+162. Yes Daddy.pdf
+   → Carpeta: Yes Daddy
+   → Nuevo nombre: Yes Daddy - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Yes Daddy/Yes Daddy - Cap. DESCONOCIDO.pdf
+
+163. Untendou Kajimaru When the lil_ brother beats the big brother Bluey.pdf
+   → Carpeta: When the lil brother beats the big brother Bluey
+   → Nuevo nombre: Untendou Kajimaru When the lil brother beats the big brother Bluey - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/When the lil brother beats the big brother Bluey/Untendou Kajimaru When the lil brother beats the big brother Bluey - Cap. ONE_SHOT.pdf
+
+164. In the shower room.pdf
+   → Carpeta: In the shower room
+   → Nuevo nombre: In the shower room - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/In the shower room/In the shower room - Cap. ONE_SHOT.pdf
+
+165. Finding Family 2.pdf
+   → Carpeta: Finding Family
+   → Nuevo nombre: Finding Family - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Finding Family/Finding Family - Cap. 2.pdf
+
+166. Additional Meeting.pdf
+   → Carpeta: Additional Meeting
+   → Nuevo nombre: Additional Meeting - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/Additional Meeting/Additional Meeting - Cap. DESCONOCIDO.pdf
+
+167. After School.pdf
+   → Carpeta: After School
+   → Nuevo nombre: After School - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/After School/After School - Cap. DESCONOCIDO.pdf
+
+168. Just a Litle LIE.pdf
+   → Carpeta: Just a Litle LIE
+   → Nuevo nombre: Just a Litle LIE - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Just a Litle LIE/Just a Litle LIE - Cap. ONE_SHOT.pdf
+
+169. Home Delivery.pdf
+   → Carpeta: Home Delivery
+   → Nuevo nombre: Home Delivery - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Home Delivery/Home Delivery - Cap. ONE_SHOT.pdf
+
+170. Krystal caído.pdf
+   → Carpeta: Krystal caído
+   → Nuevo nombre: Krystal caído - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Krystal caído/Krystal caído - Cap. DESCONOCIDO.pdf
+
+171. Drunken Affair.pdf
+   → Carpeta: Drunken Affair
+   → Nuevo nombre: Drunken Affair - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Drunken Affair/Drunken Affair - Cap. ONE_SHOT.pdf
+
+172. ¡Lo siento, pero a mi padre le Gusta!.pdf
+   → Carpeta: Lo siento, pero a mi padre le Gusta
+   → Nuevo nombre: ¡Lo siento, pero a mi padre le Gusta! - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Lo siento, pero a mi padre le Gusta/¡Lo siento, pero a mi padre le Gusta! - Cap. DESCONOCIDO.pdf
+
+173. MY ODD ROMMATE.pdf
+   → Carpeta: My Odd Rommate
+   → Nuevo nombre: MY ODD ROMMATE - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/My Odd Rommate/MY ODD ROMMATE - Cap. ONE_SHOT.pdf
+
+174. 9ANIMALS 7.pdf
+   → Carpeta: 9ANIMALS
+   → Nuevo nombre: 9ANIMALS - Cap. 7.pdf
+   → Capítulo: 7
+   → Ruta: /opt/MangaRead/Mangas/9ANIMALS/9ANIMALS - Cap. 7.pdf
+
+175. Cómo Mantener Una Buena Relación 1-41.pdf
+   → Carpeta: Cómo Mantener Una Buena Relación
+   → Nuevo nombre: Cómo Mantener Una Buena Relación - Cap. 1-41.pdf
+   → Capítulo: 1-41
+   → Ruta: /opt/MangaRead/Mangas/Cómo Mantener Una Buena Relación/Cómo Mantener Una Buena Relación - Cap. 1-41.pdf
+
+176. La Novia de la Montaña.pdf
+   → Carpeta: La Novia de la Montaña
+   → Nuevo nombre: La Novia de la Montaña - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/La Novia de la Montaña/La Novia de la Montaña - Cap. ONE_SHOT.pdf
+
+177. Risky Business.pdf
+   → Carpeta: Risky Business
+   → Nuevo nombre: Risky Business - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Risky Business/Risky Business - Cap. ONE_SHOT.pdf
+
+178. Guías Básicas de BDSM 1-21.pdf
+   → Carpeta: Guías Básicas de BDSM
+   → Nuevo nombre: Guías Básicas de BDSM - Cap. 1-21.pdf
+   → Capítulo: 1-21
+   → Ruta: /opt/MangaRead/Mangas/Guías Básicas de BDSM/Guías Básicas de BDSM - Cap. 1-21.pdf
+
+179. Larger catch.pdf
+   → Carpeta: Larger catch
+   → Nuevo nombre: Larger catch - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Larger catch/Larger catch - Cap. DESCONOCIDO.pdf
+
+180. Be With You.pdf
+   → Carpeta: Be With You
+   → Nuevo nombre: Be With You - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Be With You/Be With You - Cap. ONE_SHOT.pdf
+
+181. Cuentos extraños de las cuatro Estaciones 1-6.pdf
+   → Carpeta: Cuentos extraños de las cuatro Estaciones
+   → Nuevo nombre: Cuentos extraños de las cuatro Estaciones - Cap. 1-6.pdf
+   → Capítulo: 1-6
+   → Ruta: /opt/MangaRead/Mangas/Cuentos extraños de las cuatro Estaciones/Cuentos extraños de las cuatro Estaciones - Cap. 1-6.pdf
+
+182. Love My Dog.pdf
+   → Carpeta: Love My Dog
+   → Nuevo nombre: Love My Dog - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Love My Dog/Love My Dog - Cap. ONE_SHOT.pdf
+
+183. Fake Of Fox.pdf
+   → Carpeta: Fake Of Fox
+   → Nuevo nombre: Fake Of Fox - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Fake Of Fox/Fake Of Fox - Cap. DESCONOCIDO.pdf
+
+184. Private Lessons.pdf
+   → Carpeta: Private Lessons
+   → Nuevo nombre: Private Lessons - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Private Lessons/Private Lessons - Cap. DESCONOCIDO.pdf
+
+185. Groan 1-10.pdf
+   → Carpeta: Groan
+   → Nuevo nombre: Groan - Cap. 1-10.pdf
+   → Capítulo: 1-10
+   → Ruta: /opt/MangaRead/Mangas/Groan/Groan - Cap. 1-10.pdf
+
+186. Chico Lobo 2.pdf
+   → Carpeta: Chico Lobo
+   → Nuevo nombre: Chico Lobo - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Chico Lobo/Chico Lobo - Cap. 2.pdf
+
+187. Lush Puppies 4.pdf
+   → Carpeta: Lush Puppies
+   → Nuevo nombre: Lush Puppies - Cap. 4.pdf
+   → Capítulo: 4
+   → Ruta: /opt/MangaRead/Mangas/Lush Puppies/Lush Puppies - Cap. 4.pdf
+
+188. The cat_s kingdom.pdf
+   → Carpeta: The Cat's Kingdom
+   → Nuevo nombre: The Cat's Kingdom - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/The Cat's Kingdom/The Cat's Kingdom - Cap. ONE_SHOT.pdf
+
+189. Brothers in arms 2..pdf
+   → Carpeta: Brothers in arms
+   → Nuevo nombre: Brothers in arms - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Brothers in arms/Brothers in arms - Cap. 2.pdf
+
+190. Oso de entregas.pdf
+   → Carpeta: Oso de entregas
+   → Nuevo nombre: Oso de entregas - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Oso de entregas/Oso de entregas - Cap. ONE_SHOT.pdf
+
+191. Lenguaje de señas 1-115.pdf
+   → Carpeta: Lenguaje de señas
+   → Nuevo nombre: Lenguaje de señas - Cap. 1-115.pdf
+   → Capítulo: 1-115
+   → Ruta: /opt/MangaRead/Mangas/Lenguaje de señas/Lenguaje de señas - Cap. 1-115.pdf
+
+192. Johann + Jake.pdf
+   → Carpeta: Johann + Jake
+   → Nuevo nombre: Johann + Jake - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Johann + Jake/Johann + Jake - Cap. ONE_SHOT.pdf
+
+193. Bull dog rescue force (Omyurice).pdf
+   → Carpeta: Bull dog rescue force
+   → Nuevo nombre: Bull dog rescue force (Omyurice) - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Bull dog rescue force/Bull dog rescue force (Omyurice) - Cap. ONE_SHOT.pdf
+
+194. Yamato Beasts 3.pdf
+   → Carpeta: Yamato Beasts
+   → Nuevo nombre: Yamato Beasts - Cap. 3.pdf
+   → Capítulo: 3
+   → Ruta: /opt/MangaRead/Mangas/Yamato Beasts/Yamato Beasts - Cap. 3.pdf
+
+195. DONDE PERTENECES.pdf
+   → Carpeta: Donde Perteneces
+   → Nuevo nombre: Donde Perteneces - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Donde Perteneces/Donde Perteneces - Cap. ONE_SHOT.pdf
+
+196. Bowen&Azz.pdf
+   → Carpeta: Bowen & Azz
+   → Nuevo nombre: Bowen & Azz - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Bowen & Azz/Bowen & Azz - Cap. DESCONOCIDO.pdf
+
+197. Por favor ponle un poco mas de carbon 1-32.pdf
+   → Carpeta: Por favor ponle un poco mas de carbon
+   → Nuevo nombre: Por favor ponle un poco mas de carbon - Cap. 1-32.pdf
+   → Capítulo: 1-32
+   → Ruta: /opt/MangaRead/Mangas/Por favor ponle un poco mas de carbon/Por favor ponle un poco mas de carbon - Cap. 1-32.pdf
+
+198. Getting Familiar.pdf
+   → Carpeta: Getting Familiar
+   → Nuevo nombre: Getting Familiar - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Getting Familiar/Getting Familiar - Cap. DESCONOCIDO.pdf
+
+199. Educación Sexual en el Castillo 1-40.pdf
+   → Carpeta: Educación Sexual en el Castillo
+   → Nuevo nombre: Educación Sexual en el Castillo - Cap. 1-40.pdf
+   → Capítulo: 1-40
+   → Ruta: /opt/MangaRead/Mangas/Educación Sexual en el Castillo/Educación Sexual en el Castillo - Cap. 1-40.pdf
+
+200. Buldge Crisis 1.pdf
+   → Carpeta: Buldge Crisis
+   → Nuevo nombre: Buldge Crisis - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/Buldge Crisis/Buldge Crisis - Cap. 1.pdf
+
+201. La guarida del Tigre 1-8.pdf
+   → Carpeta: La guarida del Tigre
+   → Nuevo nombre: La guarida del Tigre - Cap. 1-8.pdf
+   → Capítulo: 1-8
+   → Ruta: /opt/MangaRead/Mangas/La guarida del Tigre/La guarida del Tigre - Cap. 1-8.pdf
+
+202. Shower Thoughts.pdf
+   → Carpeta: Shower Thoughts
+   → Nuevo nombre: Shower Thoughts - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Shower Thoughts/Shower Thoughts - Cap. ONE_SHOT.pdf
+
+203. Willy red ridding hood.pdf
+   → Carpeta: Willy red ridding hood
+   → Nuevo nombre: Willy red ridding hood - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Willy red ridding hood/Willy red ridding hood - Cap. ONE_SHOT.pdf
+
+204. Juicy Rewards.pdf
+   → Carpeta: Juicy Rewards
+   → Nuevo nombre: Juicy Rewards - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Juicy Rewards/Juicy Rewards - Cap. ONE_SHOT.pdf
+
+205. Papa y yo 1- 5.pdf
+   → Carpeta: Papa y yo
+   → Nuevo nombre: Papa y yo - Cap. 1-5.pdf
+   → Capítulo: 1-5
+   → Ruta: /opt/MangaRead/Mangas/Papa y yo/Papa y yo - Cap. 1-5.pdf
+
+206. Howl & Jasper.pdf
+   → Carpeta: Howl & Jasper
+   → Nuevo nombre: Howl & Jasper - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Howl & Jasper/Howl & Jasper - Cap. DESCONOCIDO.pdf
+
+207. Do Not Install this FURRY App!.pdf
+   → Carpeta: Do Not Install this FURRY App!
+   → Nuevo nombre: Do Not Install this FURRY App! - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Do Not Install this FURRY App!/Do Not Install this FURRY App! - Cap. ONE_SHOT.pdf
+
+208. Algo Imposible 1-18.pdf
+   → Carpeta: Algo Imposible
+   → Nuevo nombre: Algo Imposible - Cap. 1-18.pdf
+   → Capítulo: 1-18
+   → Ruta: /opt/MangaRead/Mangas/Algo Imposible/Algo Imposible - Cap. 1-18.pdf
+
+209. A trip to the gym.pdf
+   → Carpeta: A trip to the gym
+   → Nuevo nombre: A trip to the gym - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/A trip to the gym/A trip to the gym - Cap. ONE_SHOT.pdf
+
+210. Caricatures 3.pdf
+   → Carpeta: Caricatures
+   → Nuevo nombre: Caricatures - Cap. 3.pdf
+   → Capítulo: 3
+   → Ruta: /opt/MangaRead/Mangas/Caricatures/Caricatures - Cap. 3.pdf
+
+211. Wolf Teacher & Tiger Daddy.pdf
+   → Carpeta: Wolf Teacher & Tiger Daddy
+   → Nuevo nombre: Wolf Teacher & Tiger Daddy - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Wolf Teacher & Tiger Daddy/Wolf Teacher & Tiger Daddy - Cap. DESCONOCIDO.pdf
+
+212. Corrupted Brave.pdf
+   → Carpeta: Corrupted Brave
+   → Nuevo nombre: Corrupted Brave - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Corrupted Brave/Corrupted Brave - Cap. DESCONOCIDO.pdf
+
+213. 9ANIMALS 6.pdf
+   → Carpeta: 9ANIMALS
+   → Nuevo nombre: 9ANIMALS - Cap. 6.pdf
+   → Capítulo: 6
+   → Ruta: /opt/MangaRead/Mangas/9ANIMALS/9ANIMALS - Cap. 6.pdf
+
+214. Johann + Milo.pdf
+   → Carpeta: Johann + Milo
+   → Nuevo nombre: Johann + Milo - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Johann + Milo/Johann + Milo - Cap. ONE_SHOT.pdf
+
+215. Strip.pdf
+   → Carpeta: Strip
+   → Nuevo nombre: Strip - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Strip/Strip - Cap. ONE_SHOT.pdf
+
+216. Liquid Courage.pdf
+   → Carpeta: Liquid Courage
+   → Nuevo nombre: Liquid Courage - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Liquid Courage/Liquid Courage - Cap. ONE_SHOT.pdf
+
+217. ¡Por favor Blaidd, hazme el amor! Lander.pdf
+   → Carpeta: ¡Por favor Blaidd, hazme el amor!
+   → Nuevo nombre: ¡Por favor Blaidd, hazme el amor! Lander - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/¡Por favor Blaidd, hazme el amor!/¡Por favor Blaidd, hazme el amor! Lander - Cap. ONE_SHOT.pdf
+
+218. Can_t blame Kris.pdf
+   → Carpeta: Can't blame Kris
+   → Nuevo nombre: Can't blame Kris - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Can't blame Kris/Can't blame Kris - Cap. ONE_SHOT.pdf
+
+219. WolfCow.pdf
+   → Carpeta: WolfCow
+   → Nuevo nombre: WolfCow - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/WolfCow/WolfCow - Cap. ONE_SHOT.pdf
+
+220. Boku Dake No Romanticist 1-8.pdf
+   → Carpeta: Boku Dake No Romanticist
+   → Nuevo nombre: Boku Dake No Romanticist - Cap. 1-8.pdf
+   → Capítulo: 1-8
+   → Ruta: /opt/MangaRead/Mangas/Boku Dake No Romanticist/Boku Dake No Romanticist - Cap. 1-8.pdf
+
+221. 9ANIMALS 1 2.pdf
+   → Carpeta: 9ANIMALS
+   → Nuevo nombre: 9ANIMALS - Cap. 1-2.pdf
+   → Capítulo: 1-2
+   → Ruta: /opt/MangaRead/Mangas/9ANIMALS/9ANIMALS - Cap. 1-2.pdf
+
+222. Mañana recibiremos quejas por el ruido (hemuchang).pdf
+   → Carpeta: Mañana recibiremos quejas por el ruido
+   → Nuevo nombre: Mañana recibiremos quejas por el ruido (hemuchang) - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Mañana recibiremos quejas por el ruido/Mañana recibiremos quejas por el ruido (hemuchang) - Cap. ONE_SHOT.pdf
+
+223. stockholm syndrome.pdf
+   → Carpeta: Stockholm Syndrome
+   → Nuevo nombre: Stockholm Syndrome - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Stockholm Syndrome/Stockholm Syndrome - Cap. ONE_SHOT.pdf
+
+224. Anata wa Korosu Tabi 1-5.pdf
+   → Carpeta: Anata wa Korosu Tabi
+   → Nuevo nombre: Anata wa Korosu Tabi - Cap. 1-5.pdf
+   → Capítulo: 1-5
+   → Ruta: /opt/MangaRead/Mangas/Anata wa Korosu Tabi/Anata wa Korosu Tabi - Cap. 1-5.pdf
+
+225. Perros de Prisión 1-65.pdf
+   → Carpeta: Perros de Prisión
+   → Nuevo nombre: Perros de Prisión - Cap. 1-65.pdf
+   → Capítulo: 1-65
+   → Ruta: /opt/MangaRead/Mangas/Perros de Prisión/Perros de Prisión - Cap. 1-65.pdf
+
+226. Cold Sex.pdf
+   → Carpeta: Cold Sex
+   → Nuevo nombre: Cold Sex - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Cold Sex/Cold Sex - Cap. ONE_SHOT.pdf
+
+227. Caricatures 2.pdf
+   → Carpeta: Caricatures
+   → Nuevo nombre: Caricatures - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Caricatures/Caricatures - Cap. 2.pdf
+
+228. Incubus.pdf
+   → Carpeta: Incubus
+   → Nuevo nombre: Incubus - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Incubus/Incubus - Cap. DESCONOCIDO.pdf
+
+229. L𝑎 𝑁𝑜𝑣𝑖𝑎 𝐷𝑒𝑙 titan 95-156.pdf
+   → Carpeta: La Novia Del Titan
+   → Nuevo nombre: La Novia Del Titan - Cap. 95-156.pdf
+   → Capítulo: 95-156
+   → Ruta: /opt/MangaRead/Mangas/La Novia Del Titan/La Novia Del Titan - Cap. 95-156.pdf
+
+230. Vacaciones.pdf
+   → Carpeta: Vacaciones
+   → Nuevo nombre: Vacaciones - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Vacaciones/Vacaciones - Cap. ONE_SHOT.pdf
+
+231. Prologo.pdf
+   → Carpeta: Prologo
+   → Nuevo nombre: Prologo - Cap. 0.pdf
+   → Capítulo: 0
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/Prologo/Prologo - Cap. 0.pdf
+
+232. A bonding trip Complete versión.pdf
+   → Carpeta: A bonding trip
+   → Nuevo nombre: A bonding trip Complete versión - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/A bonding trip/A bonding trip Complete versión - Cap. ONE_SHOT.pdf
+
+233. Chico lobo 4 y 5.pdf
+   → Carpeta: Chico Lobo
+   → Nuevo nombre: Chico lobo - Cap. 4-5.pdf
+   → Capítulo: 4-5
+   → Ruta: /opt/MangaRead/Mangas/Chico Lobo/Chico lobo - Cap. 4-5.pdf
+
+234. Sigma Epsilon X Gaiden! TANK TOP TED.pdf
+   → Carpeta: Sigma Epsilon X
+   → Nuevo nombre: Sigma Epsilon X Gaiden! TANK TOP TED - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/Sigma Epsilon X/Sigma Epsilon X Gaiden! TANK TOP TED - Cap. ONE_SHOT.pdf
+
+235. Promiscuos Prison..pdf
+   → Carpeta: Promiscuos Prison
+   → Nuevo nombre: Promiscuos Prison - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Promiscuos Prison/Promiscuos Prison - Cap. DESCONOCIDO.pdf
+
+236. El show.pdf
+   → Carpeta: El show
+   → Nuevo nombre: El show - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/El show/El show - Cap. DESCONOCIDO.pdf
+
+237. Happiness is a warm tubercle.pdf
+   → Carpeta: Happiness is a warm tubercle
+   → Nuevo nombre: Happiness is a warm tubercle - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Happiness is a warm tubercle/Happiness is a warm tubercle - Cap. ONE_SHOT.pdf
+
+238. FINDING FAMILY 4.pdf
+   → Carpeta: Finding Family
+   → Nuevo nombre: Finding Family - Cap. 4.pdf
+   → Capítulo: 4
+   → Ruta: /opt/MangaRead/Mangas/Finding Family/Finding Family - Cap. 4.pdf
+
+239. 23｜¡El Amor Es Una Ilusión! - Superstar⇴αιε.pdf
+   → Carpeta: El Amor Es Una Ilusión
+   → Nuevo nombre: ¡El Amor Es Una Ilusión! - Superstar - Cap. 23.pdf
+   → Capítulo: 23
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/El Amor Es Una Ilusión/¡El Amor Es Una Ilusión! - Superstar - Cap. 23.pdf
+
+240. Curse of the Were-Coop by Jackaloo.pdf
+   → Carpeta: Curse of the Were-Coop
+   → Nuevo nombre: Curse of the Were-Coop by Jackaloo - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Curse of the Were-Coop/Curse of the Were-Coop by Jackaloo - Cap. ONE_SHOT.pdf
+
+241. Finding Family Chapter 8.pdf
+   → Carpeta: Finding Family
+   → Nuevo nombre: Finding Family - Cap. 8.pdf
+   → Capítulo: 8
+   → Ruta: /opt/MangaRead/Mangas/Finding Family/Finding Family - Cap. 8.pdf
+
+242. Gantus Captive (1).pdf
+   → Carpeta: Gantus Captive
+   → Nuevo nombre: Gantus Captive - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/Gantus Captive/Gantus Captive - Cap. 1.pdf
+
+243. La granja del señor A 18.pdf
+   → Carpeta: La granja del señor A
+   → Nuevo nombre: La granja del señor A - Cap. 18.pdf
+   → Capítulo: 18
+   → Ruta: /opt/MangaRead/Mangas/La granja del señor A/La granja del señor A - Cap. 18.pdf
+
+244. Staff Only.pdf
+   → Carpeta: Staff Only
+   → Nuevo nombre: Staff Only - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Staff Only/Staff Only - Cap. ONE_SHOT.pdf
+
+245. Unsportsmanlike Conduct.pdf
+   → Carpeta: Unsportsmanlike Conduct
+   → Nuevo nombre: Unsportsmanlike Conduct - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Unsportsmanlike Conduct/Unsportsmanlike Conduct - Cap. DESCONOCIDO.pdf
+
+246. 9ANIMALS 4.pdf
+   → Carpeta: 9ANIMALS
+   → Nuevo nombre: 9ANIMALS - Cap. 4.pdf
+   → Capítulo: 4
+   → Ruta: /opt/MangaRead/Mangas/9ANIMALS/9ANIMALS - Cap. 4.pdf
+
+247. Heavy Lifting.pdf
+   → Carpeta: Heavy Lifting
+   → Nuevo nombre: Heavy Lifting - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Heavy Lifting/Heavy Lifting - Cap. ONE_SHOT.pdf
+
+248. Wolf a Wolf.pdf
+   → Carpeta: Wolf a Wolf
+   → Nuevo nombre: Wolf a Wolf - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Wolf a Wolf/Wolf a Wolf - Cap. ONE_SHOT.pdf
+
+249. Roomies.pdf
+   → Carpeta: Roomies
+   → Nuevo nombre: Roomies - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Roomies/Roomies - Cap. ONE_SHOT.pdf
+
+250. B.F.pdf
+   → Carpeta: B.F
+   → Nuevo nombre: B.F - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/B.F/B.F - Cap. DESCONOCIDO.pdf
+
+251. Mi Irresistible Vecino 1-32.pdf
+   → Carpeta: Mi Irresistible Vecino
+   → Nuevo nombre: Mi Irresistible Vecino - Cap. 1-32.pdf
+   → Capítulo: 1-32
+   → Ruta: /opt/MangaRead/Mangas/Mi Irresistible Vecino/Mi Irresistible Vecino - Cap. 1-32.pdf
+
+252. BURNING PASSION.pdf
+   → Carpeta: Burning Passion
+   → Nuevo nombre: Burning Passion - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Burning Passion/Burning Passion - Cap. ONE_SHOT.pdf
+
+253. Ride The Wave!.pdf
+   → Carpeta: Ride The Wave
+   → Nuevo nombre: Ride The Wave! - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Ride The Wave/Ride The Wave! - Cap. ONE_SHOT.pdf
+
+254. Que El Mejor Hombre Gane.pdf
+   → Carpeta: Que El Mejor Hombre Gane
+   → Nuevo nombre: Que El Mejor Hombre Gane - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Que El Mejor Hombre Gane/Que El Mejor Hombre Gane - Cap. ONE_SHOT.pdf
+
+255. HERO dekirumon.pdf
+   → Carpeta: HERO dekirumon
+   → Nuevo nombre: HERO dekirumon - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/HERO dekirumon/HERO dekirumon - Cap. ONE_SHOT.pdf
+
+256. Sex Education from Tiger and Deer.pdf
+   → Carpeta: Sex Education from Tiger and Deer
+   → Nuevo nombre: Sex Education from Tiger and Deer - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Sex Education from Tiger and Deer/Sex Education from Tiger and Deer - Cap. ONE_SHOT.pdf
+
+257. BIRD IN SPA!.pdf
+   → Carpeta: BIRD IN SPA!
+   → Nuevo nombre: BIRD IN SPA! - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/BIRD IN SPA!/BIRD IN SPA! - Cap. ONE_SHOT.pdf
+
+258. Warming up to Roommates.pdf
+   → Carpeta: Warming up to Roommates
+   → Nuevo nombre: Warming up to Roommates - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Warming up to Roommates/Warming up to Roommates - Cap. DESCONOCIDO.pdf
+
+259. ¡El Amor Es Una Ilusión Superstar 15-22.pdf
+   → Carpeta: El Amor Es Una Ilusión
+   → Nuevo nombre: ¡El Amor Es Una Ilusión Superstar - Cap. 15-22.pdf
+   → Capítulo: 15-22
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/El Amor Es Una Ilusión/¡El Amor Es Una Ilusión Superstar - Cap. 15-22.pdf
+
+260. Private training.pdf
+   → Carpeta: Private training
+   → Nuevo nombre: Private training - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Private training/Private training - Cap. DESCONOCIDO.pdf
+
+261. Gyakuten.pdf
+   → Carpeta: Gyakuten
+   → Nuevo nombre: Gyakuten - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Gyakuten/Gyakuten - Cap. ONE_SHOT.pdf
+
+262. 9ANIMALS 3.pdf
+   → Carpeta: 9ANIMALS
+   → Nuevo nombre: 9ANIMALS - Cap. 3.pdf
+   → Capítulo: 3
+   → Ruta: /opt/MangaRead/Mangas/9ANIMALS/9ANIMALS - Cap. 3.pdf
+
+263. [Nekogaki] Anything for this Job [Eng].pdf
+   → Carpeta: Anything for this Job
+   → Nuevo nombre: [Nekogaki] Anything for this Job [Eng] - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Anything for this Job/[Nekogaki] Anything for this Job [Eng] - Cap. ONE_SHOT.pdf
+
+264. [Niviek] Park No. 3 [Spa].pdf
+   → Carpeta: Park
+   → Nuevo nombre: [Niviek] Park [Spa] - Cap. 3.pdf
+   → Capítulo: 3
+   → Ruta: /opt/MangaRead/Mangas/Park/[Niviek] Park [Spa] - Cap. 3.pdf
+
+265. La sensación de estar en casa.pdf
+   → Carpeta: La sensación de estar en casa
+   → Nuevo nombre: La sensación de estar en casa - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/La sensación de estar en casa/La sensación de estar en casa - Cap. ONE_SHOT.pdf
+
+266. Involuntary Pact v1.pdf
+   → Carpeta: Involuntary Pact
+   → Nuevo nombre: Involuntary Pact - Cap. v1.pdf
+   → Capítulo: v1
+   → Ruta: /opt/MangaRead/Mangas/Involuntary Pact/Involuntary Pact - Cap. v1.pdf
+
+267. Shirai kun no Shakai Kengaku.pdf
+   → Carpeta: Shirai kun no Shakai Kengaku
+   → Nuevo nombre: Shirai kun no Shakai Kengaku - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Shirai kun no Shakai Kengaku/Shirai kun no Shakai Kengaku - Cap. ONE_SHOT.pdf
+
+268. itoshi no kemukujara.pdf
+   → Carpeta: itoshi no kemukujara
+   → Nuevo nombre: itoshi no kemukujara - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/itoshi no kemukujara/itoshi no kemukujara - Cap. ONE_SHOT.pdf
+
+269. Room 701 (1).pdf
+   → Carpeta: Room 701
+   → Nuevo nombre: Room 701 - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/Room 701/Room 701 - Cap. 1.pdf
+
+270. Love among pear blossoms 1-88.pdf
+   → Carpeta: Love among pear blossoms
+   → Nuevo nombre: Love among pear blossoms - Cap. 1-88.pdf
+   → Capítulo: 1-88
+   → Ruta: /opt/MangaRead/Mangas/Love among pear blossoms/Love among pear blossoms - Cap. 1-88.pdf
+
+271. Cosas Que No Se Pueden Traer Abordo.pdf
+   → Carpeta: Cosas Que No Se Pueden Traer Abordo
+   → Nuevo nombre: Cosas Que No Se Pueden Traer Abordo - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Cosas Que No Se Pueden Traer Abordo/Cosas Que No Se Pueden Traer Abordo - Cap. ONE_SHOT.pdf
+
+272. Caricatures.pdf
+   → Carpeta: Caricatures
+   → Nuevo nombre: Caricatures - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Caricatures/Caricatures - Cap. ONE_SHOT.pdf
+
+273. Catching up.pdf
+   → Carpeta: Catching up
+   → Nuevo nombre: Catching up - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Catching up/Catching up - Cap. ONE_SHOT.pdf
+
+274. Bola 7.pdf
+   → Carpeta: Bola
+   → Nuevo nombre: Bola - Cap. 7.pdf
+   → Capítulo: 7
+   → Ruta: /opt/MangaRead/Mangas/Bola/Bola - Cap. 7.pdf
+
+275. Hidden Springs.pdf
+   → Carpeta: Hidden Springs
+   → Nuevo nombre: Hidden Springs - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Hidden Springs/Hidden Springs - Cap. ONE_SHOT.pdf
+
+276. Sosteniendo el orbe .pdf
+   → Carpeta: Sosteniendo el orbe
+   → Nuevo nombre: Sosteniendo el orbe - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Sosteniendo el orbe/Sosteniendo el orbe - Cap. DESCONOCIDO.pdf
+
+277. La granja del señor A 17.pdf
+   → Carpeta: La granja del señor A
+   → Nuevo nombre: La granja del señor A - Cap. 17.pdf
+   → Capítulo: 17
+   → Ruta: /opt/MangaRead/Mangas/La granja del señor A/La granja del señor A - Cap. 17.pdf
+
+278. Just a Litle Lie 2.pdf
+   → Carpeta: Just a Litle Lie
+   → Nuevo nombre: Just a Litle Lie - Cap. 2.pdf
+   → Capítulo: 2
+   → Ruta: /opt/MangaRead/Mangas/Just a Litle Lie/Just a Litle Lie - Cap. 2.pdf
+
+279. ¡El Amor Es Una Ilusión! Superstar 1-14.pdf
+   → Carpeta: El Amor Es Una Ilusión
+   → Nuevo nombre: ¡El Amor Es Una Ilusión! Superstar - Cap. 1-14.pdf
+   → Capítulo: 1-14
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/El Amor Es Una Ilusión/¡El Amor Es Una Ilusión! Superstar - Cap. 1-14.pdf
+
+280. Weak Point.pdf
+   → Carpeta: Weak Point
+   → Nuevo nombre: Weak Point - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Weak Point/Weak Point - Cap. DESCONOCIDO.pdf
+
+281. The Rise Of Chet.pdf
+   → Carpeta: The Rise Of Chet
+   → Nuevo nombre: The Rise Of Chet - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/The Rise Of Chet/The Rise Of Chet - Cap. DESCONOCIDO.pdf
+
+282. Just Fairy Tales Vol.pdf
+   → Carpeta: Just Fairy Tales
+   → Nuevo nombre: Just Fairy Tales - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Just Fairy Tales/Just Fairy Tales - Cap. DESCONOCIDO.pdf
+
+283. Eres tan Encantador 1-30.pdf
+   → Carpeta: Eres tan Encantador
+   → Nuevo nombre: Eres tan Encantador - Cap. 1-30.pdf
+   → Capítulo: 1-30
+   → Ruta: /opt/MangaRead/Mangas/Eres tan Encantador/Eres tan Encantador - Cap. 1-30.pdf
+
+284. Gap By MTI.pdf
+   → Carpeta: Gap
+   → Nuevo nombre: Gap By MTI - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Gap/Gap By MTI - Cap. DESCONOCIDO.pdf
+
+285. Caída Libre.pdf
+   → Carpeta: Caída Libre
+   → Nuevo nombre: Caída Libre - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Caída Libre/Caída Libre - Cap. ONE_SHOT.pdf
+
+286. Shining F.pdf
+   → Carpeta: Shining F
+   → Nuevo nombre: Shining F - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Shining F/Shining F - Cap. ONE_SHOT.pdf
+
+287. ¡Ayuda mi hijo podria ser gay!.pdf
+   → Carpeta: Ayuda mi hijo podria ser gay
+   → Nuevo nombre: ¡Ayuda mi hijo podria ser gay! - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Ayuda mi hijo podria ser gay/¡Ayuda mi hijo podria ser gay! - Cap. ONE_SHOT.pdf
+
+288. Riz y Pina.pdf
+   → Carpeta: Riz y Pina
+   → Nuevo nombre: Riz y Pina - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Riz y Pina/Riz y Pina - Cap. ONE_SHOT.pdf
+
+289. Fiebre (@BarbClumsy en Twitter).pdf
+   → Carpeta: Fiebre
+   → Nuevo nombre: Fiebre (@BarbClumsy en Twitter) - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Fiebre/Fiebre (@BarbClumsy en Twitter) - Cap. ONE_SHOT.pdf
+
+290. Mahou no Juujin Foxy Rena 1.pdf
+   → Carpeta: Mahou no Juujin Foxy Rena
+   → Nuevo nombre: Mahou no Juujin Foxy Rena - Cap. 1.pdf
+   → Capítulo: 1
+   → Ruta: /opt/MangaRead/Mangas/Mahou no Juujin Foxy Rena/Mahou no Juujin Foxy Rena - Cap. 1.pdf
+
+291. Ai wo Ataeru Kemonotachi 1-8.pdf
+   → Carpeta: Ai wo Ataeru Kemonotachi
+   → Nuevo nombre: Ai wo Ataeru Kemonotachi - Cap. 1-8.pdf
+   → Capítulo: 1-8
+   → Ruta: /opt/MangaRead/Mangas/Ai wo Ataeru Kemonotachi/Ai wo Ataeru Kemonotachi - Cap. 1-8.pdf
+
+292. Wet Sand 1-77.pdf
+   → Carpeta: Wet Sand
+   → Nuevo nombre: Wet Sand - Cap. 1-77.pdf
+   → Capítulo: 1-77
+   → Ruta: /opt/MangaRead/Mangas/Wet Sand/Wet Sand - Cap. 1-77.pdf
+
+293. El impuesto más alto.pdf
+   → Carpeta: El impuesto más alto
+   → Nuevo nombre: El impuesto más alto - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/El impuesto más alto/El impuesto más alto - Cap. ONE_SHOT.pdf
+
+294. The Demon King.pdf
+   → Carpeta: The Demon King
+   → Nuevo nombre: The Demon King - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/The Demon King/The Demon King - Cap. DESCONOCIDO.pdf
+
+295. ¿Crees En Los Espíritus Malignos 1-23.pdf
+   → Carpeta: ¿Crees En Los Espíritus Malignos?
+   → Nuevo nombre: ¿Crees En Los Espíritus Malignos? - Cap. 1-23.pdf
+   → Capítulo: 1-23
+   → Ruta: /opt/MangaRead/Mangas/¿Crees En Los Espíritus Malignos?/¿Crees En Los Espíritus Malignos? - Cap. 1-23.pdf
+
+296. Detrás de los negocios.pdf
+   → Carpeta: Detrás de los negocios
+   → Nuevo nombre: Detrás de los negocios - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Detrás de los negocios/Detrás de los negocios - Cap. DESCONOCIDO.pdf
+
+297. link zorrito.pdf
+   → Carpeta: link zorrito
+   → Nuevo nombre: link zorrito - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/link zorrito/link zorrito - Cap. DESCONOCIDO.pdf
+
+298. el amor de ui en una isla del sur un nativo me esta cortejando 1-3.pdf
+   → Carpeta: El Amor de Ui en una Isla del Sur un Nativo me esta Cortejando
+   → Nuevo nombre: El Amor de Ui en una Isla del Sur un Nativo me esta Cortejando - Cap. 1-3.pdf
+   → Capítulo: 1-3
+   → Ruta: /opt/MangaRead/Mangas/El Amor de Ui en una Isla del Sur un Nativo me esta Cortejando/El Amor de Ui en una Isla del Sur un Nativo me esta Cortejando - Cap. 1-3.pdf
+
+299. Beat dad.pdf
+   → Carpeta: Beat dad
+   → Nuevo nombre: Beat dad - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Beat dad/Beat dad - Cap. DESCONOCIDO.pdf
+
+300. POWER UP.pdf
+   → Carpeta: POWER UP
+   → Nuevo nombre: POWER UP - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/POWER UP/POWER UP - Cap. DESCONOCIDO.pdf
+
+301. Chico lobo 3.pdf
+   → Carpeta: Chico lobo
+   → Nuevo nombre: Chico lobo - Cap. 3.pdf
+   → Capítulo: 3
+   → Ruta: /opt/MangaRead/Mangas/Chico lobo/Chico lobo - Cap. 3.pdf
+
+302. Big Surprise.pdf
+   → Carpeta: Big Surprise
+   → Nuevo nombre: Big Surprise - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Big Surprise/Big Surprise - Cap. ONE_SHOT.pdf
+
+303. Chaki Chaki Bang! Bang!!.pdf
+   → Carpeta: Chaki Chaki Bang! Bang!!
+   → Nuevo nombre: Chaki Chaki Bang! Bang!! - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Chaki Chaki Bang! Bang!!/Chaki Chaki Bang! Bang!! - Cap. DESCONOCIDO.pdf
+
+304. Maririn Wolf Teacher & Tiger Daddy Another Special Ordinary Day.pdf
+   → Carpeta: Wolf Teacher & Tiger Daddy
+   → Nuevo nombre: Maririn Wolf Teacher & Tiger Daddy Another Special Ordinary Day - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → [EXTRA/SECUELA]
+   → Ruta: /opt/MangaRead/Mangas/Wolf Teacher & Tiger Daddy/Maririn Wolf Teacher & Tiger Daddy Another Special Ordinary Day - Cap. ONE_SHOT.pdf
+
+305. Finding Family 3.pdf
+   → Carpeta: Finding Family
+   → Nuevo nombre: Finding Family - Cap. 3.pdf
+   → Capítulo: 3
+   → Ruta: /opt/MangaRead/Mangas/Finding Family/Finding Family - Cap. 3.pdf
+
+306. Es demasiado guapo para mi completo 1-12.pdf
+   → Carpeta: Es demasiado guapo para mi
+   → Nuevo nombre: Es demasiado guapo para mi completo - Cap. 1-12.pdf
+   → Capítulo: 1-12
+   → Ruta: /opt/MangaRead/Mangas/Es demasiado guapo para mi/Es demasiado guapo para mi completo - Cap. 1-12.pdf
+
+307. Príncipe, ¿Llenaste tu Cuota Hoy.pdf
+   → Carpeta: Príncipe, ¿Llenaste tu Cuota Hoy?
+   → Nuevo nombre: Príncipe, ¿Llenaste tu Cuota Hoy? - Cap. DESCONOCIDO.pdf
+   → Capítulo: DESCONOCIDO
+   → Ruta: /opt/MangaRead/Mangas/Príncipe, ¿Llenaste tu Cuota Hoy?/Príncipe, ¿Llenaste tu Cuota Hoy? - Cap. DESCONOCIDO.pdf
+
+308. Desde entonces.pdf
+   → Carpeta: Desde entonces
+   → Nuevo nombre: Desde entonces - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/Desde entonces/Desde entonces - Cap. ONE_SHOT.pdf
+
+309. PIT STOP.pdf
+   → Carpeta: PIT STOP
+   → Nuevo nombre: PIT STOP - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/PIT STOP/PIT STOP - Cap. ONE_SHOT.pdf
+
+310. After Effect.pdf
+   → Carpeta: After Effect
+   → Nuevo nombre: After Effect - Cap. ONE_SHOT.pdf
+   → Capítulo: ONE_SHOT
+   → Ruta: /opt/MangaRead/Mangas/After Effect/After Effect - Cap. ONE_SHOT.pdf
+

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Organizer - Sube y Organiza tus Mangas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .upload-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .drop-zone {
+            border: 3px dashed #667eea;
+            border-radius: 15px;
+            padding: 60px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: #f8f9ff;
+        }
+
+        .drop-zone:hover, .drop-zone.drag-over {
+            border-color: #764ba2;
+            background: #f0f2ff;
+            transform: scale(1.02);
+        }
+
+        .drop-zone-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .drop-zone-text {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .drop-zone-subtext {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .file-list {
+            margin-top: 30px;
+        }
+
+        .file-item {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #e0e4ff;
+        }
+
+        .file-name {
+            flex: 1;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .file-remove {
+            background: #ff4757;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .file-remove:hover {
+            background: #ee5a6f;
+        }
+
+        .results {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .result-header {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e4ff;
+        }
+
+        .result-item {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid;
+        }
+
+        .result-item.success {
+            background: #e8f8f5;
+            border-left-color: #00d2a0;
+        }
+
+        .result-item.error {
+            background: #fee;
+            border-left-color: #ff4757;
+        }
+
+        .result-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .result-detail {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            display: none;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Manga Organizer</h1>
+            <p>Sube tus PDFs de manga y déjalos organizados automáticamente</p>
+        </div>
+
+        <div class="upload-card">
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-zone-icon">📁</div>
+                <div class="drop-zone-text">Arrastra archivos PDF aquí</div>
+                <div class="drop-zone-subtext">o haz clic para seleccionar</div>
+            </div>
+            
+            <input type="file" id="fileInput" multiple accept=".pdf">
+            
+            <div class="file-list" id="fileList"></div>
+            
+            <div style="text-align: center;">
+                <button class="btn" id="uploadBtn" disabled>
+                    🚀 Organizar Mangas
+                </button>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Analizando y organizando tus mangas con IA...</p>
+            <p style="color: #666; margin-top: 10px; font-size: 0.9em;">Esto puede tomar unos momentos</p>
+        </div>
+
+        <div class="results" id="results">
+            <div class="result-header">📊 Resultados de la Organización</div>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number" id="totalFiles">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="successFiles" style="color: #00d2a0;">0</div>
+                    <div class="stat-label">Exitosos</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="failedFiles" style="color: #ff4757;">0</div>
+                    <div class="stat-label">Fallidos</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <button class="btn" id="downloadReportBtn" style="background: linear-gradient(135deg, #00d2a0 0%, #00a076 100%);">
+                    📥 Descargar Reporte
+                </button>
+            </div>
+            
+            <div id="resultList"></div>
+        </div>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const loading = document.getElementById('loading');
+        const results = document.getElementById('results');
+        const resultList = document.getElementById('resultList');
+        const downloadReportBtn = document.getElementById('downloadReportBtn');
+        
+        let selectedFiles = [];
+        let lastResultsData = null;
+
+        // Click en la zona de drop abre el selector de archivos
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        // Drag and drop
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('drag-over');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('drag-over');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('drag-over');
+            handleFiles(e.dataTransfer.files);
+        });
+
+        // Selector de archivos
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        function handleFiles(files) {
+            selectedFiles = Array.from(files).filter(file => file.type === 'application/pdf');
+            displayFiles();
+            uploadBtn.disabled = selectedFiles.length === 0;
+        }
+
+        function displayFiles() {
+            fileList.innerHTML = '';
+            selectedFiles.forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `
+                    <span class="file-name">📄 ${file.name}</span>
+                    <button class="file-remove" onclick="removeFile(${index})">✕</button>
+                `;
+                fileList.appendChild(fileItem);
+            });
+        }
+
+        function removeFile(index) {
+            selectedFiles.splice(index, 1);
+            displayFiles();
+            uploadBtn.disabled = selectedFiles.length === 0;
+        }
+
+        uploadBtn.addEventListener('click', async () => {
+            if (selectedFiles.length === 0) return;
+
+            const formData = new FormData();
+            selectedFiles.forEach(file => {
+                formData.append('files[]', file);
+            });
+
+            // Mostrar loading
+            loading.classList.add('show');
+            results.classList.remove('show');
+            uploadBtn.disabled = true;
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                alert('Error al subir archivos: ' + error.message);
+            } finally {
+                loading.classList.remove('show');
+                uploadBtn.disabled = false;
+            }
+        });
+
+        function displayResults(data) {
+            results.classList.add('show');
+            lastResultsData = data; // Guardar para el reporte
+            
+            // Actualizar estadísticas
+            document.getElementById('totalFiles').textContent = data.total || 0;
+            document.getElementById('successFiles').textContent = data.exitosos || 0;
+            document.getElementById('failedFiles').textContent = data.fallidos || 0;
+
+            // Mostrar resultados individuales
+            resultList.innerHTML = '';
+            
+            if (data.resultados && data.resultados.length > 0) {
+                data.resultados.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.className = `result-item ${result.success ? 'success' : 'error'}`;
+                    
+                    if (result.success) {
+                        resultItem.innerHTML = `
+                            <div class="result-title">✅ ${result.original_name}</div>
+                            <div class="result-detail">
+                                📁 Carpeta: ${result.folder}<br>
+                                📝 Nuevo nombre: ${result.new_name}<br>
+                                📖 Capítulo: ${result.chapter}
+                                ${result.is_extra ? ' <span style="color: #667eea;">★ Extra/Secuela</span>' : ''}
+                            </div>
+                        `;
+                    } else {
+                        resultItem.innerHTML = `
+                            <div class="result-title">❌ ${result.original_name}</div>
+                            <div class="result-detail">Error: ${result.error}</div>
+                        `;
+                    }
+                    
+                    resultList.appendChild(resultItem);
+                });
+            }
+
+            // Limpiar la lista de archivos
+            selectedFiles = [];
+            fileList.innerHTML = '';
+            fileInput.value = '';
+            uploadBtn.disabled = true;
+        }
+
+        function downloadReport() {
+            if (!lastResultsData) {
+                alert('No hay resultados para descargar');
+                return;
+            }
+
+            const now = new Date();
+            const timestamp = now.toISOString().replace(/[:.]/g, '-').slice(0, -5);
+            
+            // Crear contenido del reporte
+            let reportContent = `REPORTE DE ORGANIZACIÓN DE MANGAS\n`;
+            reportContent += `Fecha: ${now.toLocaleString('es-ES')}\n`;
+            reportContent += `\n${'='.repeat(80)}\n\n`;
+            reportContent += `RESUMEN:\n`;
+            reportContent += `  Total de archivos procesados: ${lastResultsData.total}\n`;
+            reportContent += `  Archivos organizados exitosamente: ${lastResultsData.exitosos}\n`;
+            reportContent += `  Archivos con error: ${lastResultsData.fallidos}\n`;
+            reportContent += `\n${'='.repeat(80)}\n\n`;
+            
+            // Archivos exitosos
+            if (lastResultsData.exitosos > 0) {
+                reportContent += `ARCHIVOS ORGANIZADOS EXITOSAMENTE (${lastResultsData.exitosos}):\n\n`;
+                lastResultsData.resultados.forEach((result, index) => {
+                    if (result.success) {
+                        reportContent += `${index + 1}. ${result.original_name}\n`;
+                        reportContent += `   → Carpeta: ${result.folder}\n`;
+                        reportContent += `   → Nuevo nombre: ${result.new_name}\n`;
+                        reportContent += `   → Capítulo: ${result.chapter}\n`;
+                        if (result.is_extra) {
+                            reportContent += `   → [EXTRA/SECUELA]\n`;
+                        }
+                        reportContent += `   → Ruta completa: ${result.full_path || 'N/A'}\n`;
+                        reportContent += `\n`;
+                    }
+                });
+            }
+            
+            // Archivos con error
+            if (lastResultsData.fallidos > 0) {
+                reportContent += `\n${'='.repeat(80)}\n\n`;
+                reportContent += `ARCHIVOS CON ERROR (${lastResultsData.fallidos}):\n\n`;
+                lastResultsData.resultados.forEach((result, index) => {
+                    if (!result.success) {
+                        reportContent += `${index + 1}. ${result.original_name}\n`;
+                        reportContent += `   ✗ Error: ${result.error}\n`;
+                        reportContent += `\n`;
+                    }
+                });
+            }
+            
+            reportContent += `\n${'='.repeat(80)}\n`;
+            reportContent += `Fin del reporte\n`;
+            
+            // Crear y descargar el archivo
+            const blob = new Blob([reportContent], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `reporte-manga-organizer-${timestamp}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Event listener para el botón de descarga
+        downloadReportBtn.addEventListener('click', downloadReport);
+    </script>
+</body>
+</html>
