@@ -1,0 +1,38 @@
+{
+  "name": "MangaRead - Gestor de Mangas",
+  "short_name": "MangaRead",
+  "description": "Gestiona tu colección de mangas y recibe notificaciones de nuevos capítulos",
+  "start_url": "/upload/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#ec4899",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/upload/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/upload/icon.svg",
+      "sizes": "192x192 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ver mis mangas",
+      "url": "/upload/",
+      "description": "Ver lista de mangas"
+    },
+    {
+      "name": "Agregar manga",
+      "url": "/upload/agregar.html",
+      "description": "Agregar nuevo manga"
+    }
+  ],
+  "categories": ["entertainment", "lifestyle"],
+  "screenshots": []
+}

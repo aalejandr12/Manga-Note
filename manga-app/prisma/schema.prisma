@@ -1,0 +1,53 @@
+// Esquema de base de datos para Prisma
+// Base de datos: PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Modelo Manga
+model Manga {
+  id                 Int       @id @default(autoincrement())
+  titulo             String
+  tipo               String?   // "manga", "manhwa", "manhua", etc.
+  estadoLectura      String    @default("no_empezado") // "no_empezado", "leyendo", "terminado", "en_pausa"
+  capituloActual     Int?      // Capítulo actual (opcional)
+  calificacion       Int?      // 1-5 (opcional)
+  comentarioOpinion  String?   @db.Text // Comentario personal
+  portadaUrl         String?   // Ruta o nombre del archivo de la portada
+  
+  // Campos para vigilancia automática
+  vigilarManga           Boolean   @default(false) // Si está activada la vigilancia
+  webSource              String?   // Fuente web: "coolmic", "lezhinus", etc.
+  urlSource              String?   // URL para consultar en la API
+  capitulosDisponibles   String    @default("0") // Capítulos disponibles según API (por defecto "0" para mangas sin inicializar)
+  proximaFechaCapitulo   String    @default("Pendiente") // Próxima fecha de capítulo (por defecto "Pendiente")
+  tieneNuevosCapitulos   Boolean   @default(false) // Si hay nuevos capítulos sin ver
+  
+  fechaCreacion      DateTime  @default(now())
+  fechaActualizacion DateTime  @updatedAt
+  
+  // Relación: un manga tiene muchos links
+  links              Link[]
+
+  @@map("mangas")
+}
+
+// Modelo Link (enlaces de lectura)
+model Link {
+  id            Int     @id @default(autoincrement())
+  mangaId       Int
+  nombreFuente  String  // Ej: "MangaPlus", "VIZ", "Web 1"
+  url           String
+  esPrincipal   Boolean @default(false) // Marcar link principal (opcional)
+  
+  // Relación: muchos links pertenecen a un manga
+  manga         Manga   @relation(fields: [mangaId], references: [id], onDelete: Cascade)
+
+  @@map("links")
+}

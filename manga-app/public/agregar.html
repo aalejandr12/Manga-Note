@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Mangas Note · Agregar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#4ade80",
+            "background-light": "#f3f4f6",
+            "background-dark": "#0f172a",
+          },
+          fontFamily: {
+            display: ["Sora", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.75rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .glow-border {
+      position: relative;
+      background: linear-gradient(to right, #6366f1, #a855f7);
+      padding: 2px;
+      border-radius: 0.75rem;
+    }
+    .glow-border > * {
+      background-color: #ffffff;
+      border-radius: calc(0.75rem - 2px);
+      color: #1f2937;
+    }
+    html.light .glow-border > * {
+      background-color: #ffffff;
+      color: #1f2937;
+    }
+    .status-selector {
+      position: relative;
+      display: flex;
+      background-color: #1e293b;
+      border-radius: 9999px;
+      padding: 0.25rem;
+    }
+    html.light .status-selector {
+      background-color: #e5e7eb;
+    }
+    .status-selector-pill {
+      position: absolute;
+      top: 0.25rem;
+      bottom: 0.25rem;
+      width: calc(25% - 0.25rem);
+      border-radius: 9999px;
+      background: linear-gradient(to right, #4f46e5, #a855f7);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1;
+    }
+    .status-button {
+      flex: 1;
+      padding: 0.5rem 0;
+      text-align: center;
+      border-radius: 9999px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      transition: color 0.3s ease-in-out;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    #preview-image {
+      max-height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-300 antialiased">
+  <div class="min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-2xl mx-auto bg-slate-900/80 dark:bg-slate-900/80 backdrop-blur-sm shadow-2xl shadow-slate-900/50 rounded-2xl">
+      <div class="p-6 sm:p-8">
+        <header class="flex items-center justify-between mb-8">
+          <div class="flex items-center gap-3">
+            <div class="bg-slate-800 p-2 rounded-lg">
+              <span class="material-symbols-outlined text-indigo-400">bar_chart_4_bars</span>
+            </div>
+            <h1 id="form-title" class="text-xl font-semibold text-slate-100">Agregar Manga</h1>
+          </div>
+          <button onclick="window.location.href='index.html'" class="w-10 h-10 flex items-center justify-center bg-slate-800/80 hover:bg-slate-700/80 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-900">
+            <span class="material-symbols-outlined text-slate-400">close</span>
+          </button>
+        </header>
+        
+        <form id="manga-form" class="space-y-6">
+          <!-- Subir portada -->
+          <div>
+            <div id="dropzone" class="relative flex flex-col items-center justify-center w-full h-48 border-2 border-dashed border-slate-700 rounded-lg cursor-pointer bg-slate-800/50 hover:bg-slate-800/80 transition-colors">
+              <div id="dropzone-content" class="flex flex-col items-center justify-center pt-5 pb-6">
+                <div class="w-12 h-12 flex items-center justify-center bg-slate-700 rounded-lg mb-3">
+                  <span class="material-symbols-outlined text-slate-400 text-3xl">add_photo_alternate</span>
+                </div>
+                <p class="mb-1 text-sm text-slate-400"><span class="font-semibold text-slate-300">Subir portada</span></p>
+                <p class="text-xs text-slate-500">PNG, JPG, WEBP hasta 5MB</p>
+              </div>
+              <img id="preview-image" class="hidden absolute inset-0 w-full h-full rounded-lg" alt="Preview"/>
+              <input id="portada-input" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" type="file" accept="image/*"/>
+            </div>
+          </div>
+
+          <!-- Título -->
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-slate-400" for="titulo">Título *</label>
+            <div class="glow-border">
+              <input required class="w-full px-4 py-3 text-gray-900 border-none focus:ring-0" id="titulo" name="titulo" type="text"/>
+            </div>
+          </div>
+
+          <!-- Tipo -->
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-slate-400" for="tipo">Tipo</label>
+            <div class="glow-border">
+              <select class="w-full px-4 py-3 text-gray-900 border-none focus:ring-0" id="tipo" name="tipo">
+                <option value="">Seleccionar...</option>
+                <option value="manga">Manga</option>
+                <option value="manhwa">Manhwa</option>
+                <option value="manhua">Manhua</option>
+                <option value="webtoon">Webtoon</option>
+                <option value="comic">Comic</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Estado -->
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-slate-400">Estado</label>
+            <div class="status-selector" id="status-container">
+              <div class="status-selector-pill" id="status-pill" style="transform: translateX(0%);"></div>
+              <button class="status-button text-white" data-value="no_empezado" data-index="0" type="button">No empezado</button>
+              <button class="status-button text-slate-400" data-value="leyendo" data-index="1" type="button">Leyendo</button>
+              <button class="status-button text-slate-400" data-value="terminado" data-index="2" type="button">Terminado</button>
+              <button class="status-button text-slate-400" data-value="en_pausa" data-index="3" type="button">En pausa</button>
+            </div>
+            <input type="hidden" id="estadoLectura" name="estadoLectura" value="no_empezado"/>
+          </div>
+
+          <!-- Capítulo actual -->
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-slate-400" for="capituloActual">Capítulo actual</label>
+            <div class="glow-border">
+              <input class="w-full px-4 py-3 text-gray-900 border-none placeholder-slate-500 focus:ring-0" id="capituloActual" name="capituloActual" placeholder="Ej: 258" type="number" min="0"/>
+            </div>
+          </div>
+
+          <!-- Enlaces de lectura -->
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-slate-400">Enlaces para leer</label>
+            <div id="links-container" class="space-y-3">
+              <!-- Los links dinámicos se agregarán aquí -->
+            </div>
+            <button onclick="agregarLinkInput()" class="w-full mt-3 flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-indigo-400 border-2 border-dashed border-slate-700 rounded-lg hover:bg-slate-800 hover:border-indigo-500 transition-all duration-300" type="button">
+              <span class="material-symbols-outlined">add_circle</span>
+              Agregar link
+            </button>
+          </div>
+
+          <!-- Vigilar Manga -->
+          <div class="space-y-3 p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="vigilarManga" name="vigilarManga" class="w-5 h-5 text-indigo-500 bg-slate-700 border-slate-600 rounded focus:ring-indigo-500 focus:ring-2" />
+              <label for="vigilarManga" class="text-sm font-medium text-slate-300 cursor-pointer">
+                <span class="material-symbols-outlined text-indigo-400 align-middle mr-1" style="font-size: 20px;">visibility</span>
+                Vigilar nuevos capítulos automáticamente
+              </label>
+            </div>
+            
+            <div id="vigilancia-config" class="hidden space-y-3 ml-7 pt-2">
+              <div class="space-y-2">
+                <label class="text-xs font-medium text-slate-400" for="webSource">Fuente Web *</label>
+                <div class="glow-border">
+                  <select class="w-full px-3 py-2 text-sm text-gray-900 border-none focus:ring-0" id="webSource" name="webSource">
+                    <option value="">Seleccionar fuente...</option>
+                    <option value="coolmic">CoolMic</option>
+                    <option value="lezhinus">Lezhinus</option>
+                    <option value="mangaplus">MangaPlus</option>
+                    <option value="webtoon">Webtoon</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="space-y-2">
+                <label class="text-xs font-medium text-slate-400" for="urlSource">URL de la fuente *</label>
+                <div class="glow-border">
+                  <input class="w-full px-3 py-2 text-sm text-gray-900 border-none placeholder-slate-500 focus:ring-0" id="urlSource" name="urlSource" placeholder="https://coolmic.me/titles/293" type="url"/>
+                </div>
+                <p class="text-xs text-slate-500">URL completa del manga en la fuente seleccionada</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calificación -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-sm font-medium text-slate-400">Mi calificación</label>
+              <div id="rating-stars" class="flex items-center gap-1 text-2xl text-slate-600">
+                <span class="material-symbols-outlined cursor-pointer star" data-rating="1">star</span>
+                <span class="material-symbols-outlined cursor-pointer star" data-rating="2">star</span>
+                <span class="material-symbols-outlined cursor-pointer star" data-rating="3">star</span>
+                <span class="material-symbols-outlined cursor-pointer star" data-rating="4">star</span>
+                <span class="material-symbols-outlined cursor-pointer star" data-rating="5">star</span>
+              </div>
+              <input type="hidden" id="calificacion" name="calificacion" value=""/>
+            </div>
+
+            <!-- Comentario -->
+            <div class="space-y-2 md:col-span-2">
+              <label class="text-sm font-medium text-slate-400" for="comentarioOpinion">Comentario personal</label>
+              <div class="glow-border">
+                <textarea class="w-full px-4 py-3 text-gray-900 border-none focus:ring-0 resize-none" id="comentarioOpinion" name="comentarioOpinion" rows="4" maxlength="500"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón guardar -->
+          <div class="pt-4">
+            <button id="submit-btn" type="submit" class="w-full flex items-center justify-center gap-2 bg-primary/90 hover:bg-primary text-slate-900 font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-900">
+              <span id="btn-spinner" class="hidden inline-block h-5 w-5 border-2 border-slate-900/40 border-t-slate-900 rounded-full animate-spin"></span>
+              <span class="material-symbols-outlined">check_circle</span>
+              <span id="btn-text">Guardar</span>
+            </button>
+            <div id="progress-container" class="hidden mt-3">
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div id="progress-bar" class="h-full bg-green-500 transition-all" style="width:0%"></div>
+              </div>
+              <div id="progress-label" class="mt-2 text-sm text-slate-400">Subiendo portada: <span id="progress-text">0%</span></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Determinar BASE_PATH dinámicamente por primer segmento (e.g., /upload)
+    (function(){
+      const seg = (window.location.pathname.split('/')[1] || '');
+      window.BASE_PATH = seg && !seg.includes('.') ? `/${seg}` : '';
+    })();
+  </script>
+  <script src="js/agregar.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mangas Note · Calificar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { primary: '#4F46E5', 'background-dark': '#0B101B' }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 24}
+  </style>
+</head>
+<body class="bg-background-dark text-gray-200">
+  <div class="max-w-md mx-auto min-h-screen p-6 space-y-6">
+    <header class="flex items-center justify-between">
+      <h1 class="text-2xl font-bold">Calificar · Mangas Note</h1>
+      <a id="btn-volver" class="text-sm text-blue-400 hover:underline" href="#">Volver</a>
+    </header>
+
+    <div id="progreso" class="text-sm text-gray-400">Cargando...</div>
+
+    <div id="card" class="bg-black/30 rounded-xl overflow-hidden shadow-lg">
+      <div class="h-56 bg-gray-800 flex items-center justify-center overflow-hidden">
+        <img id="cover" class="w-full h-full object-cover" alt="Portada"/>
+      </div>
+      <div class="p-4 space-y-4">
+        <h2 id="titulo" class="text-xl font-semibold"></h2>
+        
+        <div class="space-y-2">
+          <label class="text-sm text-gray-400">Estado</label>
+          <div class="flex gap-2">
+            <button data-estado="no_empezado" class="estado-btn px-3 py-1 rounded-lg bg-gray-700">No empezado</button>
+            <button data-estado="leyendo" class="estado-btn px-3 py-1 rounded-lg bg-gray-700">Leyendo</button>
+            <button data-estado="en_pausa" class="estado-btn px-3 py-1 rounded-lg bg-gray-700">En pausa</button>
+            <button data-estado="terminado" class="estado-btn px-3 py-1 rounded-lg bg-gray-700">Terminado</button>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-sm text-gray-400">Calificación</label>
+          <div id="stars" class="flex gap-1 text-3xl">
+            <span data-star="1" class="material-symbols-outlined cursor-pointer">star</span>
+            <span data-star="2" class="material-symbols-outlined cursor-pointer">star</span>
+            <span data-star="3" class="material-symbols-outlined cursor-pointer">star</span>
+            <span data-star="4" class="material-symbols-outlined cursor-pointer">star</span>
+            <span data-star="5" class="material-symbols-outlined cursor-pointer">star</span>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-sm text-gray-400">Comentario</label>
+          <textarea id="comentario" rows="4" class="w-full rounded-lg bg-gray-800 border border-gray-700 p-3" placeholder="¿Qué te gustó o no?"></textarea>
+        </div>
+
+        <div class="flex items-center justify-between pt-2">
+          <button id="btn-omitir" class="px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600">Omitir</button>
+          <div class="space-x-2">
+            <button id="btn-guardar" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500">Guardar</button>
+            <button id="btn-guardar-siguiente" class="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500">Guardar y siguiente</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="empty" class="hidden text-center text-gray-400">
+      No hay mangas pendientes de calificar.
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const seg = (window.location.pathname.split('/')[1] || '');
+      window.BASE_PATH = seg && !seg.includes('.') ? `/${seg}` : '';
+    })();
+  </script>
+  <script src="js/calificar.js?v=20251125"></script>
+</body>
+</html>

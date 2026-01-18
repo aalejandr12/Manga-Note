@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Notificaciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+  <div class="max-w-md w-full p-8 bg-gray-800 rounded-lg shadow-xl">
+    <h1 class="text-2xl font-bold mb-6 text-center">🔔 Test de Notificaciones</h1>
+    
+    <div class="space-y-4">
+      <button id="btn-activar" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition">
+        Activar Notificaciones
+      </button>
+      
+      <button id="btn-test-simple" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition">
+        Enviar Notificación Simple
+      </button>
+      
+      <button id="btn-test-manga" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-4 rounded-lg transition">
+        Enviar Notificación de Manga
+      </button>
+      
+      <button id="btn-verificar" class="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 rounded-lg transition">
+        Verificar Mangas Nuevos
+      </button>
+    </div>
+    
+    <div id="resultado" class="mt-6 p-4 bg-gray-700 rounded-lg hidden">
+      <p class="text-sm" id="resultado-text"></p>
+    </div>
+    
+    <div class="mt-6 text-center">
+      <a href="/upload/" class="text-blue-400 hover:text-blue-300">← Volver al inicio</a>
+    </div>
+  </div>
+
+  <script>
+    const BASE_PATH = '/upload';
+    const API_URL = `${BASE_PATH}/api`;
+    
+    let registration = null;
+    
+    function mostrarResultado(mensaje, tipo = 'info') {
+      const resultado = document.getElementById('resultado');
+      const texto = document.getElementById('resultado-text');
+      resultado.classList.remove('hidden', 'bg-green-700', 'bg-red-700', 'bg-blue-700');
+      
+      if (tipo === 'success') resultado.classList.add('bg-green-700');
+      else if (tipo === 'error') resultado.classList.add('bg-red-700');
+      else resultado.classList.add('bg-blue-700');
+      
+      texto.textContent = mensaje;
+    }
+    
+    async function registrarSW() {
+      if (!('serviceWorker' in navigator)) {
+        mostrarResultado('Service Worker no soportado', 'error');
+        return null;
+      }
+      
+      try {
+        registration = await navigator.serviceWorker.register(`${BASE_PATH}/service-worker.js`);
+        console.log('SW registrado:', registration);
+        return registration;
+      } catch (error) {
+        console.error('Error registrando SW:', error);
+        return null;
+      }
+    }
+    
+    document.getElementById('btn-activar').addEventListener('click', async () => {
+      if (!('Notification' in window)) {
+        mostrarResultado('Notificaciones no soportadas en este navegador', 'error');
+        return;
+      }
+      
+      if (Notification.permission === 'granted') {
+        mostrarResultado('✅ Notificaciones ya están activadas', 'success');
+        return;
+      }
+      
+      const permission = await Notification.requestPermission();
+      
+      if (permission === 'granted') {
+        mostrarResultado('✅ Notificaciones activadas correctamente', 'success');
+        await registrarSW();
+      } else {
+        mostrarResultado('❌ Permiso denegado', 'error');
+      }
+    });
+    
+    document.getElementById('btn-test-simple').addEventListener('click', async () => {
+      if (Notification.permission !== 'granted') {
+        mostrarResultado('Primero activa las notificaciones', 'error');
+        return;
+      }
+      
+      if (!registration) {
+        registration = await registrarSW();
+      }
+      
+      try {
+        await registration.showNotification('🎉 Prueba de Notificación', {
+          body: 'Esta es una notificación de prueba',
+          icon: `${BASE_PATH}/icon.svg`,
+          badge: `${BASE_PATH}/icon.svg`,
+          vibrate: [200, 100, 200],
+          tag: 'test',
+          requireInteraction: false
+        });
+        mostrarResultado('✅ Notificación enviada', 'success');
+      } catch (error) {
+        mostrarResultado('❌ Error: ' + error.message, 'error');
+      }
+    });
+    
+    document.getElementById('btn-test-manga').addEventListener('click', async () => {
+      if (Notification.permission !== 'granted') {
+        mostrarResultado('Primero activa las notificaciones', 'error');
+        return;
+      }
+      
+      if (!registration) {
+        registration = await registrarSW();
+      }
+      
+      try {
+        await registration.showNotification('📚 ¡The Titans Bride actualizado!', {
+          body: 'Nuevos capítulos disponibles: 166',
+          icon: `${BASE_PATH}/icon.svg`,
+          badge: `${BASE_PATH}/icon.svg`,
+          vibrate: [200, 100, 200, 100, 200],
+          tag: 'manga-22',
+          requireInteraction: true,
+          data: {
+            url: `${window.location.origin}${BASE_PATH}/detalle.html?id=22`,
+            mangaId: 22
+          },
+          actions: [
+            { action: 'open', title: 'Ver ahora' },
+            { action: 'close', title: 'Cerrar' }
+          ]
+        });
+        mostrarResultado('✅ Notificación de manga enviada', 'success');
+      } catch (error) {
+        mostrarResultado('❌ Error: ' + error.message, 'error');
+      }
+    });
+    
+    document.getElementById('btn-verificar').addEventListener('click', async () => {
+      try {
+        const response = await fetch(`${API_URL}/mangas/nuevos`);
+        const mangas = await response.json();
+        
+        if (mangas.length === 0) {
+          mostrarResultado('No hay mangas con nuevos capítulos', 'info');
+        } else {
+          const titulos = mangas.map(m => m.titulo).join(', ');
+          mostrarResultado(`${mangas.length} manga(s) con nuevos capítulos: ${titulos}`, 'success');
+        }
+      } catch (error) {
+        mostrarResultado('❌ Error: ' + error.message, 'error');
+      }
+    });
+    
+    // Auto-registrar SW al cargar
+    window.addEventListener('load', async () => {
+      if (Notification.permission === 'granted') {
+        await registrarSW();
+        mostrarResultado('Service Worker listo. Permisos concedidos ✅', 'success');
+      } else if (Notification.permission === 'denied') {
+        mostrarResultado('⚠️ Notificaciones bloqueadas. Actívalas en configuración del navegador', 'error');
+      } else {
+        mostrarResultado('👆 Toca "Activar Notificaciones" para empezar', 'info');
+      }
+    });
+  </script>
+</body>
+</html>
