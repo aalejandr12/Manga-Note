@@ -48,9 +48,9 @@ services:
       # Volúmenes de Komga para migración (solo lectura)
       - /opt/MangaRead/komga-config:/opt/MangaRead/komga-config:ro
       - /opt/MangaRead/Mangas:/opt/MangaRead/Mangas:ro
-      # Para desarrollo: descomentar la siguiente línea para hot-reload
-      # - ./src:/usr/src/app/src
-      # - ./public:/usr/src/app/public
+      # Para desarrollo: hot-reload activado
+      - ./src:/usr/src/app/src
+      - ./public:/usr/src/app/public
     depends_on:
       db:
         condition: service_healthy
