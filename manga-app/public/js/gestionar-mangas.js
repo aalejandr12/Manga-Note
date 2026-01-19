@@ -173,12 +173,15 @@ async function subirNuevoManga(e) {
     formData.append('archivo', archivo);
 
     const btnSubmit = document.getElementById('btn-subir-nuevo');
+    const btnContent = document.getElementById('btn-content-nuevo');
     const progressContainer = document.getElementById('progress-nuevo');
     const progressBar = document.getElementById('progress-bar-nuevo');
     const progressText = document.getElementById('progress-text-nuevo');
 
     try {
         btnSubmit.disabled = true;
+        btnSubmit.classList.remove('hover:bg-green-700');
+        btnSubmit.classList.add('cursor-wait', 'pb-6');
         progressContainer.classList.remove('hidden');
 
         const xhr = new XMLHttpRequest();
@@ -188,7 +191,7 @@ async function subirNuevoManga(e) {
             if (e.lengthComputable) {
                 const percent = Math.round((e.loaded / e.total) * 100);
                 progressBar.style.width = percent + '%';
-                progressText.textContent = `Subiendo: ${percent}% (${formatBytes(e.loaded)} / ${formatBytes(e.total)})`;
+                progressText.textContent = `${percent}% (${formatBytes(e.loaded)} / ${formatBytes(e.total)})`;
             }
         });
 
@@ -200,7 +203,8 @@ async function subirNuevoManga(e) {
                 document.getElementById('form-nuevo-manga').reset();
                 progressContainer.classList.add('hidden');
                 progressBar.style.width = '0%';
-
+                btnSubmit.classList.remove('cursor-wait', 'pb-6');
+                btnSubmit.classList.add('hover:bg-green-700');
                 // Recargar carpetas
                 await cargarCarpetas();
             } else {
@@ -249,12 +253,15 @@ async function agregarCapitulo(e) {
     formData.append('archivo', archivo);
 
     const btnSubmit = document.getElementById('btn-agregar-capitulo');
+    const btnContent = document.getElementById('btn-content-capitulo');
     const progressContainer = document.getElementById('progress-capitulo');
     const progressBar = document.getElementById('progress-bar-capitulo');
     const progressText = document.getElementById('progress-text-capitulo');
 
     try {
         btnSubmit.disabled = true;
+        btnSubmit.classList.remove('hover:bg-blue-700');
+        btnSubmit.classList.add('cursor-wait', 'pb-6');
         progressContainer.classList.remove('hidden');
 
         const xhr = new XMLHttpRequest();
@@ -264,7 +271,7 @@ async function agregarCapitulo(e) {
             if (e.lengthComputable) {
                 const percent = Math.round((e.loaded / e.total) * 100);
                 progressBar.style.width = percent + '%';
-                progressText.textContent = `Subiendo: ${percent}% (${formatBytes(e.loaded)} / ${formatBytes(e.total)})`;
+                progressText.textContent = `${percent}% (${formatBytes(e.loaded)} / ${formatBytes(e.total)})`;
             }
         });
 
@@ -277,6 +284,8 @@ async function agregarCapitulo(e) {
                 carpetaSeleccionadaAgregar = '';
                 progressContainer.classList.add('hidden');
                 progressBar.style.width = '0%';
+                btnSubmit.classList.remove('cursor-wait', 'pb-6');
+                btnSubmit.classList.add('hover:bg-blue-700');
             } else {
                 throw new Error('Error al agregar capítulo');
             }
@@ -312,8 +321,13 @@ async function eliminarArchivo(e) {
         return;
     }
 
-    // Confirmación
-    if (!confirm(`¿Estás seguro de eliminar "${archivo}" de la carpeta "${carpeta}"?\n\nEsta acción no se puede deshacer.`)) {
+    // Confirmación con modal personalizado
+    const confirmado = await mostrarConfirmacion(
+        'Eliminar archivo',
+        `¿Estás seguro de eliminar "${archivo}" de la carpeta "${carpeta}"?\n\nEsta acción no se puede deshacer.`
+    );
+
+    if (!confirmado) {
         return;
     }
 
@@ -361,9 +375,18 @@ function mostrarNotificacion(mensaje, tipo = 'info') {
         info: 'bg-blue-500'
     };
 
+    const iconos = {
+        success: 'check_circle',
+        error: 'error',
+        info: 'info'
+    };
+
     const notif = document.createElement('div');
-    notif.className = `fixed top-4 right-4 ${colores[tipo]} text-white px-6 py-3 rounded-lg shadow-lg z-50 transition-opacity duration-300`;
-    notif.textContent = mensaje;
+    notif.className = `fixed top-4 right-4 ${colores[tipo]} text-white px-6 py-3 rounded-lg shadow-lg z-50 transition-opacity duration-300 flex items-center gap-2`;
+    notif.innerHTML = `
+    <span class="material-symbols-outlined">${iconos[tipo]}</span>
+    <span>${mensaje}</span>
+  `;
 
     document.body.appendChild(notif);
 
@@ -371,4 +394,47 @@ function mostrarNotificacion(mensaje, tipo = 'info') {
         notif.style.opacity = '0';
         setTimeout(() => notif.remove(), 300);
     }, 3000);
+}
+
+/**
+ * Mostrar modal de confirmación personalizado
+ */
+function mostrarConfirmacion(titulo, mensaje) {
+    return new Promise((resolve) => {
+        const modal = document.getElementById('confirm-modal');
+        const titleEl = document.getElementById('confirm-title');
+        const messageEl = document.getElementById('confirm-message');
+        const okBtn = document.getElementById('confirm-ok');
+        const cancelBtn = document.getElementById('confirm-cancel');
+
+        titleEl.textContent = titulo;
+        messageEl.textContent = mensaje;
+        modal.classList.remove('hidden');
+
+        const handleOk = () => {
+            modal.classList.add('hidden');
+            okBtn.removeEventListener('click', handleOk);
+            cancelBtn.removeEventListener('click', handleCancel);
+            resolve(true);
+        };
+
+        const handleCancel = () => {
+            modal.classList.add('hidden');
+            okBtn.removeEventListener('click', handleOk);
+            cancelBtn.removeEventListener('click', handleCancel);
+            resolve(false);
+        };
+
+        okBtn.addEventListener('click', handleOk);
+        cancelBtn.addEventListener('click', handleCancel);
+
+        // Cerrar con ESC
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                handleCancel();
+                document.removeEventListener('keydown', handleEsc);
+            }
+        };
+        document.addEventListener('keydown', handleEsc);
+    });
 }

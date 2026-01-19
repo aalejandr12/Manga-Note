@@ -99,18 +99,19 @@
                         class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-indigo-500 file:text-white hover:file:bg-indigo-600 file:cursor-pointer" />
                 </div>
 
-                <div id="progress-nuevo" class="hidden">
-                    <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                        <div id="progress-bar-nuevo" class="h-full bg-green-500 transition-all duration-300"
-                            style="width: 0%"></div>
-                    </div>
-                    <p id="progress-text-nuevo" class="text-sm text-gray-400 mt-2">Subiendo: 0%</p>
-                </div>
-
                 <button type="submit" id="btn-subir-nuevo"
-                    class="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
-                    <span class="material-symbols-outlined">upload</span>
-                    Subir Nuevo Manga
+                    class="relative w-full flex flex-col items-center justify-center overflow-hidden bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300">
+                    <div id="btn-content-nuevo" class="flex items-center gap-2">
+                        <span class="material-symbols-outlined">upload</span>
+                        <span>Subir Nuevo Manga</span>
+                    </div>
+                    <div id="progress-nuevo" class="hidden w-full mt-2">
+                        <div class="w-full h-1.5 bg-green-800 rounded-full overflow-hidden">
+                            <div id="progress-bar-nuevo" class="h-full bg-white transition-all duration-300"
+                                style="width: 0%"></div>
+                        </div>
+                        <p id="progress-text-nuevo" class="text-xs text-green-100 mt-1">Subiendo: 0%</p>
+                    </div>
                 </button>
             </form>
         </section>
@@ -144,18 +145,19 @@
                         class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-indigo-500 file:text-white hover:file:bg-indigo-600 file:cursor-pointer" />
                 </div>
 
-                <div id="progress-capitulo" class="hidden">
-                    <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                        <div id="progress-bar-capitulo" class="h-full bg-blue-500 transition-all duration-300"
-                            style="width: 0%"></div>
-                    </div>
-                    <p id="progress-text-capitulo" class="text-sm text-gray-400 mt-2">Subiendo: 0%</p>
-                </div>
-
                 <button type="submit" id="btn-agregar-capitulo"
-                    class="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
-                    <span class="material-symbols-outlined">add</span>
-                    Agregar Capítulo
+                    class="relative w-full flex flex-col items-center justify-center overflow-hidden bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300">
+                    <div id="btn-content-capitulo" class="flex items-center gap-2">
+                        <span class="material-symbols-outlined">add</span>
+                        <span>Agregar Capítulo</span>
+                    </div>
+                    <div id="progress-capitulo" class="hidden w-full mt-2">
+                        <div class="w-full h-1.5 bg-blue-800 rounded-full overflow-hidden">
+                            <div id="progress-bar-capitulo" class="h-full bg-white transition-all duration-300"
+                                style="width: 0%"></div>
+                        </div>
+                        <p id="progress-text-capitulo" class="text-xs text-blue-100 mt-1">Subiendo: 0%</p>
+                    </div>
                 </button>
             </form>
         </section>
@@ -198,6 +200,30 @@
                 </button>
             </form>
         </section>
+    </div>
+
+    <!-- Modal de confirmación personalizado -->
+    <div id="confirm-modal"
+        class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-xl p-6 max-w-md w-full border border-red-500/50 shadow-2xl">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-red-500/20 p-2 rounded-lg">
+                    <span class="material-symbols-outlined text-red-400 text-3xl">warning</span>
+                </div>
+                <h3 id="confirm-title" class="text-xl font-bold text-white">Confirmar acción</h3>
+            </div>
+            <p id="confirm-message" class="text-gray-300 mb-6"></p>
+            <div class="flex gap-3">
+                <button id="confirm-cancel"
+                    class="flex-1 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors">
+                    Cancelar
+                </button>
+                <button id="confirm-ok"
+                    class="flex-1 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors font-semibold">
+                    Confirmar
+                </button>
+            </div>
+        </div>
     </div>
 
     <script>
