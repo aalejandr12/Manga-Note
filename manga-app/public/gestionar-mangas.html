@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mangas Note · Gestionar PDFs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#4F46E5",
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#0D1117",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .autocomplete-dropdown {
+            max-height: 200px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #4b5563 #1f2937;
+        }
+
+        .autocomplete-dropdown::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .autocomplete-dropdown::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+
+        .autocomplete-dropdown::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 3px;
+        }
+
+        .autocomplete-item {
+            transition: background-color 0.2s;
+        }
+
+        .autocomplete-item:hover {
+            background-color: #374151;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-gray-200 font-display antialiased">
+    <div class="min-h-screen max-w-4xl mx-auto p-6">
+        <!-- Header -->
+        <header class="mb-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="bg-indigo-500/20 p-2 rounded-lg">
+                        <span class="material-symbols-outlined text-indigo-400 text-3xl">folder_managed</span>
+                    </div>
+                    <h1 class="text-2xl font-bold text-white">Gestionar Mangas PDF</h1>
+                </div>
+                <button onclick="window.location.href='index.html'"
+                    class="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Volver
+                </button>
+            </div>
+        </header>
+
+        <!-- Sección 1: Subir Nuevo Manga -->
+        <section class="mb-8 bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-green-400">add_circle</span>
+                <h2 class="text-xl font-semibold text-white">Subir Nuevo Manga</h2>
+            </div>
+
+            <form id="form-nuevo-manga" class="space-y-4">
+                <div>
+                    <label for="nombre-manga-nuevo" class="block text-sm font-medium text-gray-300 mb-2">
+                        Nombre del Manga (se creará carpeta)
+                    </label>
+                    <input type="text" id="nombre-manga-nuevo" required placeholder="Ej: One Piece"
+                        class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                </div>
+
+                <div>
+                    <label for="archivo-nuevo" class="block text-sm font-medium text-gray-300 mb-2">
+                        Archivo PDF
+                    </label>
+                    <input type="file" id="archivo-nuevo" accept=".pdf" required
+                        class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-indigo-500 file:text-white hover:file:bg-indigo-600 file:cursor-pointer" />
+                </div>
+
+                <div id="progress-nuevo" class="hidden">
+                    <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+                        <div id="progress-bar-nuevo" class="h-full bg-green-500 transition-all duration-300"
+                            style="width: 0%"></div>
+                    </div>
+                    <p id="progress-text-nuevo" class="text-sm text-gray-400 mt-2">Subiendo: 0%</p>
+                </div>
+
+                <button type="submit" id="btn-subir-nuevo"
+                    class="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined">upload</span>
+                    Subir Nuevo Manga
+                </button>
+            </form>
+        </section>
+
+        <!-- Sección 2: Agregar Capítulo -->
+        <section class="mb-8 bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-blue-400">library_add</span>
+                <h2 class="text-xl font-semibold text-white">Agregar Capítulo a Serie Existente</h2>
+            </div>
+
+            <form id="form-agregar-capitulo" class="space-y-4">
+                <div class="relative">
+                    <label for="carpeta-existente" class="block text-sm font-medium text-gray-300 mb-2">
+                        Buscar Carpeta de Manga
+                    </label>
+                    <input type="text" id="carpeta-existente" autocomplete="off" placeholder="Escribe para buscar..."
+                        class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+
+                    <div id="autocomplete-agregar"
+                        class="hidden absolute z-10 w-full mt-1 bg-gray-800 border border-gray-600 rounded-lg shadow-lg autocomplete-dropdown">
+                        <!-- Sugerencias se cargan aquí -->
+                    </div>
+                </div>
+
+                <div>
+                    <label for="archivo-capitulo" class="block text-sm font-medium text-gray-300 mb-2">
+                        Archivo PDF del Capítulo
+                    </label>
+                    <input type="file" id="archivo-capitulo" accept=".pdf" required
+                        class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-indigo-500 file:text-white hover:file:bg-indigo-600 file:cursor-pointer" />
+                </div>
+
+                <div id="progress-capitulo" class="hidden">
+                    <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+                        <div id="progress-bar-capitulo" class="h-full bg-blue-500 transition-all duration-300"
+                            style="width: 0%"></div>
+                    </div>
+                    <p id="progress-text-capitulo" class="text-sm text-gray-400 mt-2">Subiendo: 0%</p>
+                </div>
+
+                <button type="submit" id="btn-agregar-capitulo"
+                    class="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined">add</span>
+                    Agregar Capítulo
+                </button>
+            </form>
+        </section>
+
+        <!-- Sección 3: Eliminar Archivos -->
+        <section class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 border-red-500/30">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-red-400">delete</span>
+                <h2 class="text-xl font-semibold text-white">Eliminar Archivos</h2>
+            </div>
+
+            <form id="form-eliminar" class="space-y-4">
+                <div class="relative">
+                    <label for="carpeta-eliminar" class="block text-sm font-medium text-gray-300 mb-2">
+                        Buscar Carpeta de Manga
+                    </label>
+                    <input type="text" id="carpeta-eliminar" autocomplete="off" placeholder="Escribe para buscar..."
+                        class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" />
+
+                    <div id="autocomplete-eliminar"
+                        class="hidden absolute z-10 w-full mt-1 bg-gray-800 border border-gray-600 rounded-lg shadow-lg autocomplete-dropdown">
+                        <!-- Sugerencias se cargan aquí -->
+                    </div>
+                </div>
+
+                <div id="container-archivos-eliminar" class="hidden">
+                    <label for="archivo-eliminar" class="block text-sm font-medium text-gray-300 mb-2">
+                        Seleccionar Archivo PDF
+                    </label>
+                    <select id="archivo-eliminar"
+                        class="w-full px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                        <option value="">Selecciona un archivo...</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="btn-eliminar" disabled
+                    class="w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 px-4 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined">delete_forever</span>
+                    Eliminar Archivo
+                </button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // Determinar BASE_PATH dinámicamente
+        (function () {
+            const seg = (window.location.pathname.split('/')[1] || '');
+            window.BASE_PATH = seg && !seg.includes('.') ? `/${seg}` : '';
+        })();
+    </script>
+    <script src="js/gestionar-mangas.js"></script>
+</body>
+
+</html>

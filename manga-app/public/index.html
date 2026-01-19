@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html class="dark" lang="es">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta name="description" content="Gestiona tu colección de mangas y recibe notificaciones de nuevos capítulos"/>
-  <meta name="theme-color" content="#ec4899"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="description" content="Gestiona tu colección de mangas y recibe notificaciones de nuevos capítulos" />
+  <meta name="theme-color" content="#ec4899" />
   <title>Mangas Note</title>
-  
+
   <!-- PWA -->
-  <link rel="manifest" href="manifest.json"/>
-  <meta name="mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-  <meta name="apple-mobile-web-app-title" content="MangaRead"/>
-  
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="MangaRead" />
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <script>
     tailwind.config = {
@@ -43,16 +48,17 @@
   <style>
     .material-symbols-outlined {
       font-variation-settings:
-      'FILL' 1,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 24
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
     }
+
     .material-symbols-outlined.unfilled {
       font-variation-settings:
-      'FILL' 0
+        'FILL' 0
     }
-    
+
     /* Skeleton Loading Animations */
     .skeleton {
       animation: skeleton-loading 1.5s ease-in-out infinite alternate;
@@ -60,28 +66,33 @@
       background-size: 200% 100%;
       animation: skeleton-wave 1.5s ease-in-out infinite;
     }
-    
+
     .dark .skeleton {
       background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
       background-size: 200% 100%;
     }
-    
+
     @keyframes skeleton-wave {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
+      0% {
+        background-position: -200% 0;
+      }
+
+      100% {
+        background-position: 200% 0;
+      }
     }
-    
+
     .skeleton-card {
       background-color: #e5e7eb;
       border-radius: 0.5rem;
       overflow: hidden;
       animation: pulse 1.5s ease-in-out infinite;
     }
-    
+
     .dark .skeleton-card {
       background-color: #374151;
     }
-    
+
     .skeleton-image {
       width: 100%;
       height: 16rem;
@@ -89,44 +100,44 @@
       background-size: 200% 100%;
       animation: skeleton-wave 1.5s ease-in-out infinite;
     }
-    
+
     .dark .skeleton-image {
       background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
       background-size: 200% 100%;
     }
-    
+
     .skeleton-text {
       background: linear-gradient(90deg, #d1d5db 25%, #9ca3af 50%, #d1d5db 75%);
       background-size: 200% 100%;
       border-radius: 0.25rem;
       animation: skeleton-wave 1.5s ease-in-out infinite;
     }
-    
+
     .dark .skeleton-text {
       background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
       background-size: 200% 100%;
     }
-    
+
     .skeleton-text-sm {
       height: 0.75rem;
       margin-bottom: 0.5rem;
     }
-    
+
     .skeleton-text-lg {
       height: 1rem;
       margin-bottom: 0.75rem;
     }
-    
+
     /* Smooth transitions for images */
     .manga-image {
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
-    
+
     .manga-image.loaded {
       opacity: 1;
     }
-    
+
     /* Loading spinner */
     .loading-spinner {
       border: 3px solid #f3f3f3;
@@ -136,46 +147,66 @@
       height: 24px;
       animation: spin 1s linear infinite;
     }
-    
+
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
   </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-sans text-gray-800 dark:text-gray-200 antialiased">
   <div class="max-w-md mx-auto min-h-screen relative pb-28">
     <header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-6 pb-4">
       <div class="flex justify-between items-center mb-4">
         <h1 class="font-display text-3xl text-gray-900 dark:text-white">Mangas Note</h1>
         <div class="flex items-center space-x-4">
-          <button onclick="toggleBusqueda()" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+          <button onclick="toggleBusqueda()"
+            class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
             <span class="material-symbols-outlined unfilled text-3xl">search</span>
           </button>
-          <button onclick="toggleFiltros()" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+          <button onclick="toggleFiltros()"
+            class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
             <span class="material-symbols-outlined unfilled text-3xl">tune</span>
           </button>
-          <button onclick="window.location.href=`${BASE_PATH}/calificar.html`" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" title="Calificar pendientes">
-            <span class="material-symbols-outlined unfilled text-3xl">grade</span>
+          <button onclick="window.location.href=`${BASE_PATH}/gestionar-mangas.html`"
+            class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            title="Gestionar Mangas PDF">
+            <span class="material-symbols-outlined unfilled text-3xl">upload_file</span>
           </button>
         </div>
       </div>
-      
+
       <!-- Filtros por estado -->
       <div id="filtros-container" class="hidden mt-4 flex gap-2 overflow-x-auto pb-2">
-        <button onclick="filtrarPorEstado('todos')" class="filtro-btn bg-primary text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-all" data-estado="todos">
+        <button onclick="filtrarPorEstado('todos')"
+          class="filtro-btn bg-primary text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-all"
+          data-estado="todos">
           Todos
         </button>
-        <button onclick="filtrarPorEstado('leyendo')" class="filtro-btn bg-gray-600 dark:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-all" data-estado="leyendo">
+        <button onclick="filtrarPorEstado('leyendo')"
+          class="filtro-btn bg-gray-600 dark:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-all"
+          data-estado="leyendo">
           Leyendo
         </button>
-        <button onclick="filtrarPorEstado('terminado')" class="filtro-btn bg-gray-600 dark:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-all" data-estado="terminado">
+        <button onclick="filtrarPorEstado('terminado')"
+          class="filtro-btn bg-gray-600 dark:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-all"
+          data-estado="terminado">
           Terminado
         </button>
-        <button onclick="filtrarPorEstado('en_pausa')" class="filtro-btn bg-gray-600 dark:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-all" data-estado="en_pausa">
+        <button onclick="filtrarPorEstado('en_pausa')"
+          class="filtro-btn bg-gray-600 dark:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-all"
+          data-estado="en_pausa">
           En Pausa
         </button>
-        <button onclick="filtrarPorEstado('no_empezado')" class="filtro-btn bg-gray-600 dark:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-all" data-estado="no_empezado">
+        <button onclick="filtrarPorEstado('no_empezado')"
+          class="filtro-btn bg-gray-600 dark:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap transition-all"
+          data-estado="no_empezado">
           No Empezado
         </button>
       </div>
@@ -184,28 +215,30 @@
       <div id="search-container" class="hidden mt-4">
         <div class="flex items-center gap-2">
           <div class="flex-1">
-            <input id="search-input" type="text" placeholder="Buscar por título..." class="w-full px-4 py-2 rounded-lg bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input id="search-input" type="text" placeholder="Buscar por título..."
+              class="w-full px-4 py-2 rounded-lg bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
-          <button onclick="limpiarBusqueda()" class="px-3 py-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600">Limpiar</button>
+          <button onclick="limpiarBusqueda()"
+            class="px-3 py-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600">Limpiar</button>
         </div>
       </div>
     </header>
-    
+
     <main class="p-6 pt-2">
       <!-- Grid de mangas -->
       <div id="mangas-grid" class="grid grid-cols-2 gap-4">
         <!-- Los mangas se cargarán aquí dinámicamente -->
       </div>
-      
+
       <!-- Indicador de carga -->
       <div id="loading-indicator" class="hidden flex justify-center items-center py-8">
         <div class="loading-spinner"></div>
         <span class="ml-2 text-gray-600 dark:text-gray-400">Cargando más mangas...</span>
       </div>
-      
+
       <!-- Sentinel para scroll infinito -->
       <div id="scroll-sentinel" class="h-4"></div>
-      
+
       <!-- Mensaje cuando no hay mangas -->
       <div id="empty-state" class="hidden text-center py-16">
         <span class="material-symbols-outlined text-6xl text-gray-400 mb-4">library_books</span>
@@ -213,14 +246,15 @@
         <p class="text-gray-400 dark:text-gray-500 text-sm mt-2">Presiona el botón + para agregar uno</p>
       </div>
     </main>
-    
+
     <!-- Botón flotante para agregar manga -->
     <div class="fixed bottom-6 right-0 left-0 flex justify-center">
-          <button onclick="window.location.href=`${BASE_PATH}/agregar.html`" class="bg-primary text-white rounded-2xl p-4 shadow-lg shadow-primary/40 transform hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out">
+      <button onclick="window.location.href=`${BASE_PATH}/agregar.html`"
+        class="bg-primary text-white rounded-2xl p-4 shadow-lg shadow-primary/40 transform hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out">
         <span class="material-symbols-outlined text-4xl">add</span>
       </button>
     </div>
-    
+
     <!-- Botón de notificaciones (se agrega dinámicamente) -->
   </div>
 
@@ -233,7 +267,7 @@
     // Inicializar notificaciones al cargar la página
     document.addEventListener('DOMContentLoaded', async () => {
       await inicializarNotificaciones();
-      
+
       // Agregar botón de notificaciones
       const boton = crearBotonNotificaciones();
       if (boton) {
@@ -243,11 +277,12 @@
   </script>
   <script>
     // Determinar BASE_PATH dinámicamente por primer segmento (e.g., /upload)
-    (function(){
+    (function () {
       const seg = (window.location.pathname.split('/')[1] || '');
       window.BASE_PATH = seg && !seg.includes('.') ? `/${seg}` : '';
     })();
   </script>
   <script src="js/index.js"></script>
 </body>
+
 </html>

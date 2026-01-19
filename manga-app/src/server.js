@@ -5,6 +5,7 @@ const path = require('path');
 const mangaRoutes = require('./routes/mangaRoutes');
 const linkRoutes = require('./routes/linkRoutes');
 const pushRoutes = require('./routes/pushRoutes');
+const fileRoutes = require('./routes/fileRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -25,6 +26,7 @@ app.use(`${BASE_PATH}/covers`, express.static(path.join(__dirname, '../data/cove
 app.use(`${BASE_PATH}/api/mangas`, mangaRoutes);
 app.use(`${BASE_PATH}/api/links`, linkRoutes);
 app.use(`${BASE_PATH}/api/push`, pushRoutes);
+app.use(`${BASE_PATH}/api/files`, fileRoutes); // Nueva ruta para gestión de archivos
 
 // Ruta raíz - servir index.html
 app.get(`${BASE_PATH}/`, (req, res) => {

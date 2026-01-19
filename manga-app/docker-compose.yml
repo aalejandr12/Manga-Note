@@ -47,7 +47,8 @@ services:
       - ./data/covers:/usr/src/app/data/covers
       # Volúmenes de Komga para migración (solo lectura)
       - /opt/MangaRead/komga-config:/opt/MangaRead/komga-config:ro
-      - /opt/MangaRead/Mangas:/opt/MangaRead/Mangas:ro
+      # Volumen de Mangas (lectura/escritura para gestión de PDFs)
+      - /opt/MangaRead/Mangas:/opt/MangaRead/Mangas:rw
       # Para desarrollo: hot-reload activado
       - ./src:/usr/src/app/src
       - ./public:/usr/src/app/public
