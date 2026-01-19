@@ -343,10 +343,21 @@ async function eliminarArchivo(e) {
         if (!response.ok) throw new Error('Error al eliminar archivo');
 
         const data = await response.json();
-        mostrarNotificacion(`✅ Archivo "${archivo}" eliminado`, 'success');
 
-        // Recargar archivos de la carpeta
-        await cargarArchivosParaEliminar(carpeta);
+        if (data.carpetaEliminada) {
+            mostrarNotificacion(`✅ Archivo "${archivo}" eliminado y carpeta "${carpeta}" removida (estaba vacía)`, 'success');
+            // Recargar lista de carpetas
+            await cargarCarpetas();
+            // Limpiar formulario
+            document.getElementById('carpeta-eliminar').value = '';
+            document.getElementById('container-archivos-eliminar').classList.add('hidden');
+            document.getElementById('btn-eliminar').disabled = true;
+            carpetaSeleccionadaEliminar = '';
+        } else {
+            mostrarNotificacion(`✅ Archivo "${archivo}" eliminado`, 'success');
+            // Recargar archivos de la carpeta
+            await cargarArchivosParaEliminar(carpeta);
+        }
 
     } catch (error) {
         console.error('Error:', error);

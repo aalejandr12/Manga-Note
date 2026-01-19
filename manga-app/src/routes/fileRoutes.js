@@ -186,12 +186,30 @@ router.delete('/eliminar', async (req, res) => {
         // Eliminar archivo
         await fs.unlink(rutaArchivo);
 
-        res.json({
-            success: true,
-            mensaje: 'Archivo eliminado exitosamente',
-            carpeta: carpeta,
-            archivo: archivo
-        });
+        // Verificar si la carpeta quedó vacía y eliminarla
+        const archivosRestantes = await fs.readdir(path.join(MANGAS_PATH, carpeta));
+        const carpetaVacia = archivosRestantes.length === 0;
+
+        if (carpetaVacia) {
+            // Eliminar carpeta vacía
+            await fs.rmdir(path.join(MANGAS_PATH, carpeta));
+
+            res.json({
+                success: true,
+                mensaje: 'Archivo eliminado exitosamente y carpeta vacía removida',
+                carpeta: carpeta,
+                archivo: archivo,
+                carpetaEliminada: true
+            });
+        } else {
+            res.json({
+                success: true,
+                mensaje: 'Archivo eliminado exitosamente',
+                carpeta: carpeta,
+                archivo: archivo,
+                carpetaEliminada: false
+            });
+        }
     } catch (error) {
         if (error.code === 'ENOENT') {
             return res.status(404).json({ error: 'Archivo no encontrado' });
